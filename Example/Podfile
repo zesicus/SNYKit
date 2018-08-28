@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SNYKit_Example' do
+  pod 'SNYKit', :path => '../'
+
+  target 'SNYKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

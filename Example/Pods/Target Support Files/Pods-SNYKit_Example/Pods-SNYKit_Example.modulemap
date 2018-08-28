@@ -1,0 +1,6 @@
+framework module Pods_SNYKit_Example {
+  umbrella header "Pods-SNYKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
