@@ -27,9 +27,7 @@ typedef enum{
 @property (nonatomic, assign) double longitude;
 
 //颜色生成图片
-+ (UIImage *)imageFromColor:(UIColor *)color
-                     corner:(Corner)corner
-                     radius:(CGFloat)radius;
++ (UIImage *)imageFromColor:(UIColor *)color corner:(Corner)corner radius:(CGFloat)radius;
 
 //上面的便利方法
 + (UIImage *)createImageWithColor:(UIColor *)color;
@@ -39,9 +37,6 @@ typedef enum{
 
 //把你的keyword变成有颜色的字体～
 + (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color;
-
-//输出字体名字
-+ (void)printFontName;
 
 //给你的Layer加一个过渡效果，方法里面有详细说明
 + (void)addAnimation:(CALayer *)layer Type:(NSString *)type;
@@ -63,21 +58,21 @@ typedef enum{
  */
 
 #pragma mark - 从GPS坐标转化到高德坐标
-- (id)transformFromGPSToGD;
+- (OCSword *)transformFromGPSToGD;
 
 #pragma mark - 从高德坐标转化到百度坐标
-- (id)transformFromGDToBD;
+- (OCSword *)transformFromGDToBD;
 
 #pragma mark - 从百度坐标到高德坐标
-- (id)transformFromBDToGD;
+- (OCSword *)transformFromBDToGD;
 
 #pragma mark - 从高德坐标到GPS坐标
-- (id)transformFromGDToGPS;
+- (OCSword *)transformFromGDToGPS;
 
 #pragma mark - 从百度坐标到GPS坐标
-- (id)transformFromBDToGPS;
+- (OCSword *)transformFromBDToGPS;
 
-//取得Label中文字数组
+//取得Label里文字数组
 + (NSArray *)getLinesArrayOfStringInLabel:(UILabel *)label;
 
 //跳动View，类似于蚂蚁森林的感觉

@@ -98,16 +98,6 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
     return attributeString;
 }
 
-+ (void)printFontName {
-    for(NSString *fontfamilyname in [UIFont familyNames]) {
-        NSLog(@"family:'%@'",fontfamilyname);
-        for(NSString *fontName in [UIFont fontNamesForFamilyName:fontfamilyname]) {
-            NSLog(@"\tfont:'%@'",fontName);
-        }
-        NSLog(@"-------------");
-    }
-}
-
 + (void)addAnimation:(CALayer *)layer Type:(NSString *)type {
     CATransition *transition = [CATransition animation];
     transition.duration = 0.5f;
@@ -165,22 +155,22 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
     return self;
 }
 
-- (id)transformFromGPSToGD {
+- (OCSword *)transformFromGPSToGD {
     CLLocationCoordinate2D coor = [OCSword transformFromWGSToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
     return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
-- (id)transformFromGDToBD {
+- (OCSword *)transformFromGDToBD {
     CLLocationCoordinate2D coor = [OCSword transformFromGCJToBaidu:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
     return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
-- (id)transformFromBDToGD {
+- (OCSword *)transformFromBDToGD {
     CLLocationCoordinate2D coor = [OCSword transformFromBaiduToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
     return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
-- (id)transformFromGDToGPS {
+- (OCSword *)transformFromGDToGPS {
     CLLocationCoordinate2D coor = [OCSword transformFromGCJToWGS:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
     return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
