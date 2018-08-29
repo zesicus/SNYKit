@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "OCSword.h"
 
 FOUNDATION_EXPORT double SNYKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char SNYKitVersionString[];
