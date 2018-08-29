@@ -53,7 +53,7 @@ public extension String {
         return html2AttributedString?.string ?? ""
     }
     
-    //获得行间距字符串
+    //获得带有行间距的字符串
     public func getLineSpacing(lineSpacing: CGFloat = 10.0, charSpacing: CGFloat = 1) -> NSMutableAttributedString {
         let paragraphStye = NSMutableParagraphStyle()
         //调整行间距

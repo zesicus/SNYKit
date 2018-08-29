@@ -19,6 +19,7 @@ public extension UIButton {
         self.imageEdgeInsets = UIEdgeInsetsMake(0, title.getWidth(size: font.pointSize) + dist, 0, -title.getWidth(size: font.pointSize) - dist)
     }
     
+    // 设置按钮图片在文字左
     public func setTitleRightImgLeft(title: String, font: UIFont, fontColor: UIColor, image: UIImage, dist: CGFloat = 0.0, state: UIControlState = .normal) {
         self.setTitle(title, for: state)
         self.setTitleColor(fontColor, for: state)

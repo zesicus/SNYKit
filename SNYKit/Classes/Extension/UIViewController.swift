@@ -34,7 +34,6 @@ public extension UIViewController {
     }
     
     //单按钮提示
-    
     public func showBtnAlert(msg: String) {
         let alert = UIAlertController(title: "提示", message: msg, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)

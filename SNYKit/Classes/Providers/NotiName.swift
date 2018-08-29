@@ -8,6 +8,8 @@
 
 import UIKit
 
+//预留的通知名称，如果你需要的话
+
 public struct NotiName {
     public static var updateList: Notification.Name {
         return Notification.Name("NotiUpdateList")

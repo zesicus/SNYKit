@@ -10,7 +10,7 @@ import Foundation
 
 public extension Int {
     
-    // 秒转日期
+    // 毫秒转日期
     public func getDate() -> Date {
         let flashDate = Date(timeIntervalSince1970: (TimeInterval(self / 1000)))
         return flashDate

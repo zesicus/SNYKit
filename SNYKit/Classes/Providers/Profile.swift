@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Userdefaults中缓存的取出
 public struct Profile {
     public static var img: UIImage! = (defaults.object(forKey: DefaultsKey.profileImg) != nil) ? UIImage(data: defaults.object(forKey: DefaultsKey.profileImg) as! Data) : #imageLiteral(resourceName: "default_head")
     public static var imgAddr = defaults.object(forKey: DefaultsKey.profileImgAddr) as? String

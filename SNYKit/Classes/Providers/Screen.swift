@@ -8,6 +8,7 @@
 
 import UIKit
 
+//屏幕尺寸
 public struct Screen {
     public static let frame = UIScreen.main.bounds
     public static let width = UIScreen.main.bounds.width

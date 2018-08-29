@@ -8,6 +8,8 @@
 
 import UIKit
 
+//GCD封装纯属个人偏好
+
 public struct GCD {
     public static let main = DispatchQueue.main
     public static let global = DispatchQueue.global()

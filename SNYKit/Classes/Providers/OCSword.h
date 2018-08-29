@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+//16进制的颜色
 #define COLOR_WITH_HEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 blue:((float)(hexValue & 0xFF)) / 255.0 alpha:1.0f]
 #define WEAKSELF  __weak typeof(self) weakSelf = self;
 
@@ -25,22 +26,33 @@ typedef enum{
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
 
+//颜色生成图片
 + (UIImage *)imageFromColor:(UIColor *)color
                      corner:(Corner)corner
                      radius:(CGFloat)radius;
 
+//上面的便利方法
++ (UIImage *)createImageWithColor:(UIColor *)color;
+
+//把你想变颜色的字列出来，当然你只能传单个字符的数组进去
 + (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color;
 
+//把你的keyword变成有颜色的字体～
 + (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color;
 
+//输出字体名字
 + (void)printFontName;
 
+//给你的Layer加一个过渡效果，方法里面有详细说明
 + (void)addAnimation:(CALayer *)layer Type:(NSString *)type;
 
+//生成整个View截图，当然如果想截长图传个ScrollView就好了
 + (UIImage *)generateImageFromView:(UIView *)view size:(CGSize)size;
 
+//输入日期显示星期几
 + (NSString*)getWeek:(NSDate *)weekData;
 
+//便利的，加载经纬度方法，只是对公有变量赋值而已
 - (id)initWithLatitude:(double)latitude andLongitude:(double)longitude;
 
 /*
@@ -68,12 +80,10 @@ typedef enum{
 //取得Label中文字数组
 + (NSArray *)getLinesArrayOfStringInLabel:(UILabel *)label;
 
-+ (UIImage *)createImageWithColor:(UIColor *)color;
-
-//跳动View
+//跳动View，类似于蚂蚁森林的感觉
 + (void)jumpAnimationView:(UIView *)sender;
     
-//检查手机号
+//检查手机号到底是不是手机号
 + (BOOL)checkTel:(NSString *)str;
 
 @end

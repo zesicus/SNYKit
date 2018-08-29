@@ -9,6 +9,8 @@
 import UIKit
 /*
 import Alamofire
+ 
+//Alamofire 600 秒长链接，如果需要可以调的更长一点
 
 public class LongTimeoutAlamofireManager: Alamofire.SessionManager {
     public static let sharedManager: LongTimeoutAlamofireManager = {

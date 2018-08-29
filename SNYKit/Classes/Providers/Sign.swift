@@ -8,6 +8,7 @@
 
 import UIKit
 
+//一些共有的判断写在了这里
 public struct Sign {
     public static var isLoginAlertShow = false
     public static var isRealNameAlertShow = false

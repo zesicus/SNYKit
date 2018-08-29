@@ -8,6 +8,7 @@
 
 public extension UIColor {
     
+    // 直接输Int的颜色
     public convenience init(r: Int, g: Int, b: Int) {
         assert(r >= 0 && r <= 255, "Red数值有误")
         assert(g >= 0 && g <= 255, "Green数值有误")
@@ -16,6 +17,7 @@ public extension UIColor {
         self.init(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1.0)
     }
     
+    // 16进制颜色
     public convenience init(hex: Int, alpha: CGFloat = 1) {
         self.init(red: ((CGFloat)((hex & 0xFF0000) >> 16)) / 255.0, green: ((CGFloat)((hex & 0xFF00) >> 8)) / 255.0, blue: ((CGFloat)(hex & 0xFF)) / 255.0, alpha: alpha)
     }
@@ -34,7 +36,7 @@ public extension UIColor {
         return image!
     }
     
-    // Cached colors
+    // 预留 colors
     
     public class var mainTheme: UIColor {
         return UIColor(hex: 0x597EF7)

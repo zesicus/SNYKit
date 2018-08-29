@@ -8,6 +8,8 @@
 
 import UIKit
 
+//预留出一些可能需要用到的，如果你想把一些东西都存储到UserDefaults的话
+
 public struct DefaultsKey {
     public static var token: String {
         return "kToken"

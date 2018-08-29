@@ -8,6 +8,7 @@
 
 import UIKit
 
+//自定义Push的预留字段
 public struct Push {
     public static var id: Int? = nil
     public static var type: Int? = nil

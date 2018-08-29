@@ -8,6 +8,7 @@
 
 public extension Date {
     
+    //Date转String
     public func getStringDate(format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = .current
@@ -16,12 +17,7 @@ public extension Date {
         return stringDate
     }
     
-    public func delta(from: Date) -> DateComponents {
-        let calendar = Calendar.current
-        let unit = calendar.dateComponents([.day, .year, .month, .hour, .minute, .second], from: self as Date, to: from)
-        return unit
-    }
-    
+    //判别时间
     public func judgeTime() -> String {
         if Calendar.current.isDateInToday(self) {
             let components = self.delta(from: Date())
@@ -39,6 +35,12 @@ public extension Date {
                 return self.getStringDate(format: "yyyy-MM-dd")
             }
         }
+    }
+    
+    fileprivate func delta(from: Date) -> DateComponents {
+        let calendar = Calendar.current
+        let unit = calendar.dateComponents([.day, .year, .month, .hour, .minute, .second], from: self as Date, to: from)
+        return unit
     }
     
     public func isThisYear() -> Bool {
