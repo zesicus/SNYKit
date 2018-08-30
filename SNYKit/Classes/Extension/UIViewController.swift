@@ -11,22 +11,22 @@ import UIKit
 public extension UIViewController {
     
     //左右BarButtonItems
-    public func addLeftBarButtonItem(_ navigationItem: UINavigationItem, title: String, target: Any?, action: Selector?) {
+    public func addLeftBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: action)
-        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.mainTheme, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: titleColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
         
-        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.mainTheme, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: titleColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
     }
     
     public func addLefttBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: target, action: action)
     }
     
-    public func addRightBarButtonItem(_ navigationItem: UINavigationItem, title: String, target: Any?, action: Selector?) {
+    public func addRightBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: action)
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.mainTheme, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: titleColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
         
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.mainTheme, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: titleColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
     }
     
     public func addRightBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {

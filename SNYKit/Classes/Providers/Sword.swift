@@ -11,7 +11,6 @@ import UIKit
 // MARK: - Global Vars
 public let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 public let defaults = UserDefaults.standard
-//public let appDelegate = UIApplication.shared.delegate as! AppDelegate
 public let defaultNoti = NotificationCenter.default
 public let uuid = UIDevice.current.identifierForVendor?.uuidString
 public var documentsDirectory: URL = {

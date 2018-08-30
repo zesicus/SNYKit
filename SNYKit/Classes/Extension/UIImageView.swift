@@ -11,7 +11,7 @@ import UIKit
 extension UIImageView {
     
     //填充虚线
-    public func fillImaginaryLine() {
+    public func fillImaginaryLine(color: UIColor) {
         let width = self.frame.size.width
         let height = self.frame.size.height
         UIGraphicsBeginImageContext(self.frame.size)
@@ -23,7 +23,7 @@ extension UIImageView {
         
         let lengths:[CGFloat] = [2,5] // 绘制 跳过 无限循环
         
-        context.setStrokeColor(UIColor.separator.cgColor)
+        context.setStrokeColor(color.cgColor)
         context.setLineWidth(2)
         context.setLineDash(phase: 0, lengths: lengths)
         context.move(to: CGPoint(x: 0, y: 0))

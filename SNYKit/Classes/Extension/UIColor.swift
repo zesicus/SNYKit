@@ -36,38 +36,4 @@ public extension UIColor {
         return image!
     }
     
-    // 预留 colors
-    
-    public class var mainTheme: UIColor {
-        return UIColor(hex: 0x597EF7)
-    }
-    
-    public class var tabGrayFont: UIColor {
-        return UIColor(hex: 0x989898)
-    }
-    
-    public class var normalBack: UIColor {
-        return UIColor(hex: 0xf3f5f9)
-    }
-    
-    public class var separator: UIColor {
-        return UIColor(hex: 0xe5e5e5)
-    }
-    
-    public class var tabLine: UIColor {
-        return UIColor(hex: 0xf3f3f3)
-    }
-    
-    public class var mostBlack: UIColor {
-        return UIColor(hex: 0x262626)
-    }
-    
-    public class var midBlack: UIColor {
-        return UIColor(hex: 0x656565)
-    }
-    
-    public class var leastBlack: UIColor {
-        return UIColor(hex: 0x989898)
-    }
-    
 }

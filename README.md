@@ -24,7 +24,7 @@ SNYKit分为两部分：
 * Extension 写在类扩展里面的工具方法
 * Providers 其他变量和工具方法的集合
 
-下面逐一解释一下用法：
+详细说明⤵：
 
 ### Extension
 
@@ -171,7 +171,7 @@ image.compressImage(toByte: 100 * 1024)
 imageView.fillImaginaryLine()
 ```
 
-* Kingfisher 已注释
+* Kingfisher 需要关闭注释
 
 ```Swift
 //设置无缓存网络图片
@@ -201,9 +201,9 @@ addLefttBarButtonItem(navigationItem, image: #imageLiteral(resourceName: "bar_se
 //右导航栏图片按钮
 addRightBarButtonItem(navigationItem, image: #imageLiteral(resourceName: "bar_post"), target: self, action: #selector(rightBtnAction))
 //左导航栏文字按钮
-addLeftBarButtonItem(navigationItem, title: "左边", target: self, action: #selector(leftAction))
+addLeftBarButtonItem(navigationItem, title: "左按钮", titleColor: .red, target: self, action: #selector(leftAction))
 //右导航栏文字按钮
-addRightBarButtonItem(navigationItem, title: "右边", target: self, action: #selector(rightAction))
+addRightBarButtonItem(navigationItem, title: "右按钮", titleColor: .blue, target: self, action: #selector(rightAction))
 ```
 
 ### Providers
@@ -311,21 +311,13 @@ GCD.after(time: 1.5, queue: GCD.main, callBack: {
 })
 ```
 
-**Sign.swift**文件：存储一些全局的判断条件，还有：
+**AppStates.swift**文件：存储一些全局的判断条件，还有：
 
-* 判断App是否在前台`Sign.isAppRunningForeground`
-* 判断App是否在后台：`Sign.isAppInBackground`
-* 判断App是否处在非活跃状态：`Sign.isAppInactive`
+* 判断App是否在前台`AppStates.foreground()`
+* 判断App是否在后台：`AppStates.background()`
+* 判断App是否处在非活跃状态：`AppStates.inactive()`
 
 **AlamofireManager.swift**文件：Alamofire 600 秒长链接，如果需要可以调的更长一点，注释起来的，需要的可以打开。
-
-**DefaultKeys.swift**文件：预留出一些可能需要用到的，如果你想把一些东西都存储到UserDefaults的话。
-
-**NotiName.swift**文件：预留的通知名称，如果你需要的话。
-
-**Profile.swift**文件：用于加载全局Userdefaults中缓存的取出。
-
-**Push.swift**文件：自定义Push的Model，或许你根本用不到他😅
 
 ## License
 

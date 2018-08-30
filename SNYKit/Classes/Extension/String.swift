@@ -64,12 +64,12 @@ public extension String {
         let speStr = "[展开]"
         let theStr = self.substring(fromIndex: self.count - 4)
         if speStr == theStr {
-            attributedString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.mainTheme], range: NSMakeRange(self.count - 4, 4))
+            attributedString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.blue], range: NSMakeRange(self.count - 4, 4))
         }
         let otherSpeStr = "[收起]"
         let otherStr = self.substring(fromIndex: self.count - 4)
         if otherSpeStr == otherStr {
-            attributedString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.mainTheme], range: NSMakeRange(self.count - 4, 4))
+            attributedString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.blue], range: NSMakeRange(self.count - 4, 4))
         }
         //**************************************************
         return attributedString
