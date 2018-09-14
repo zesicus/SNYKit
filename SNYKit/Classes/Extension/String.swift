@@ -134,4 +134,57 @@ public extension String {
             AudioServicesPlaySystemSound(soundID)
         }
     }
+    
+    //倒计时
+    @available (iOS 10.0, *)
+    func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        //结束时间
+        let endDateFormatter = DateFormatter()
+        endDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let endDate = Date().addingTimeInterval(dateFormatter.date(from: self)!.timeIntervalSince(endDateFormatter.date(from: "2000-01-01 00:00:00")!))
+        
+        //当前时间
+        let currentDate = Date.init()
+        
+        let calendar = Calendar.current
+        let unit:Set<Calendar.Component> = [.day,.hour,.minute,.second]
+        let commponent:DateComponents = calendar.dateComponents(unit, from: currentDate, to: endDate)
+        
+        var secondStr = commponent.second
+        var minitStr = commponent.minute
+        var hourStr = commponent.hour
+        var dayStr = commponent.day
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+            
+            if  secondStr == 0 && minitStr! == 0 && hourStr == 0 && dayStr == 0 {
+                timer.invalidate()
+            }
+            
+            secondStr = secondStr! - 1
+            
+            if secondStr == -1 {
+                secondStr = 59
+                minitStr = minitStr! - 1
+                if minitStr == -1 {
+                    minitStr = 59
+                    hourStr = hourStr! - 1
+                    if hourStr == -1 {
+                        hourStr = 23
+                        dayStr = dayStr! - 1
+                    }
+                }
+            }
+            
+            
+            
+            completion(String(dayStr ?? 0), String(hourStr ?? 0), String(minitStr ?? 0), String(secondStr ?? 0))
+        }
+        
+        RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+    }
+    
+    
 }
