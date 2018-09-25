@@ -23,4 +23,17 @@ extension UITableView {
         let ip = IndexPath(row: r - 1, section: s - 1)
         self.scrollToRow(at: ip, at: .bottom, animated: animated)
     }
+    
+    //是否滑动到了底部
+    public func isScrollToBot() -> Bool {
+        let height = self.frame.size.height
+        let contentOffsetY = self.contentOffset.y
+        let bottomOffset = self.contentSize.height - contentOffsetY
+        if bottomOffset <= height {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

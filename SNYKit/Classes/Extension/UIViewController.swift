@@ -22,6 +22,23 @@ public extension UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: target, action: action)
     }
     
+    public func addLeftBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
+        var barBtnArr = [UIBarButtonItem]()
+        let fixBar = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        fixBar.width = dist
+        for (index, img) in images.enumerated() {
+            let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 22, height: 22))
+            btn.setImage(img, for: .normal)
+            btn.addTarget(target, action: action[index], for: .touchUpInside)
+            let barBtn = UIBarButtonItem(customView: btn)
+            barBtnArr.append(barBtn)
+            if index != images.count - 1 {
+                barBtnArr.append(fixBar)
+            }
+        }
+        navigationItem.leftBarButtonItems = barBtnArr
+    }
+    
     public func addRightBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: action)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: titleColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
@@ -31,6 +48,23 @@ public extension UIViewController {
     
     public func addRightBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: target, action: action)
+    }
+    
+    public func addRightBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
+        var barBtnArr = [UIBarButtonItem]()
+        let fixBar = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        fixBar.width = dist
+        for (index, img) in images.enumerated() {
+            let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 22, height: 22))
+            btn.setImage(img, for: .normal)
+            btn.addTarget(target, action: action[index], for: .touchUpInside)
+            let barBtn = UIBarButtonItem(customView: btn)
+            barBtnArr.append(barBtn)
+            if index != images.count - 1 {
+                barBtnArr.append(fixBar)
+            }
+        }
+        navigationItem.rightBarButtonItems = barBtnArr
     }
     
     //单按钮提示
