@@ -37,7 +37,7 @@ public extension Date {
         }
     }
     
-    fileprivate func delta(from: Date) -> DateComponents {
+    public func delta(from: Date) -> DateComponents {
         let calendar = Calendar.current
         let unit = calendar.dateComponents([.day, .year, .month, .hour, .minute, .second], from: self as Date, to: from)
         return unit

@@ -186,5 +186,40 @@ public extension String {
         RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
     }
     
+    //隐藏名字(用*代替)
+    func hideName() -> String {
+        var formatedName = ""
+        var charArr = [String]()
+        for (index, char) in self.toCharArray().enumerated() {
+            if index == 0 {
+                charArr.append(char)
+            } else {
+                charArr.append("*")
+            }
+        }
+        for char in charArr {
+            formatedName += char
+        }
+        return formatedName
+    }
     
+    //隐藏手机号码
+    func hidePhone() -> String {
+        var formatedPhone = ""
+        var charArr = [String]()
+        for (index, char) in self.toCharArray().enumerated() {
+            switch index {
+            case 3, 4, 5, 6:
+                charArr.append("*")
+                break
+            default:
+                charArr.append(char)
+                break
+            }
+        }
+        for char in charArr {
+            formatedPhone += char
+        }
+        return formatedPhone
+    }
 }

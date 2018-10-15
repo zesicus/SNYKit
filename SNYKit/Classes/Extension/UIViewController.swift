@@ -18,7 +18,7 @@ public extension UIViewController {
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: titleColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
     }
     
-    public func addLefttBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
+    public func addLeftBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: target, action: action)
     }
     
