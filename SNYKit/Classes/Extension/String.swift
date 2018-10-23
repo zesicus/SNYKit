@@ -125,7 +125,7 @@ public extension String {
     }
     
     //播放声音
-    func playSound() {
+    public func playSound() {
         let filePath = Bundle.main.path(forResource: self, ofType: nil)
         if filePath != nil {
             let fileURL = URL(string: filePath!)
@@ -137,7 +137,7 @@ public extension String {
     
     //倒计时
     @available (iOS 10.0, *)
-    func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
+    public func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
         //结束时间
@@ -187,7 +187,7 @@ public extension String {
     }
     
     //隐藏名字(用*代替)
-    func hideName() -> String {
+    public func hideName() -> String {
         var formatedName = ""
         var charArr = [String]()
         for (index, char) in self.toCharArray().enumerated() {
@@ -204,7 +204,7 @@ public extension String {
     }
     
     //隐藏手机号码
-    func hidePhone() -> String {
+    public func hidePhone() -> String {
         var formatedPhone = ""
         var charArr = [String]()
         for (index, char) in self.toCharArray().enumerated() {
