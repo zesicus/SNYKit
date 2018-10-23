@@ -135,6 +135,43 @@ public extension String {
         }
     }
     
+    //隐藏名字(用*代替)
+    public var hideName: String {
+        var formatedName = ""
+        var charArr = [String]()
+        for (index, char) in self.toCharArray().enumerated() {
+            if index == 0 {
+                charArr.append(char)
+            } else {
+                charArr.append("*")
+            }
+        }
+        for char in charArr {
+            formatedName += char
+        }
+        return formatedName
+    }
+    
+    //隐藏手机号码
+    public var hidePhone: String {
+        var formatedPhone = ""
+        var charArr = [String]()
+        for (index, char) in self.toCharArray().enumerated() {
+            switch index {
+            case 3, 4, 5, 6:
+                charArr.append("*")
+                break
+            default:
+                charArr.append(char)
+                break
+            }
+        }
+        for char in charArr {
+            formatedPhone += char
+        }
+        return formatedPhone
+    }
+    
     //倒计时
     @available (iOS 10.0, *)
     public func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
@@ -178,48 +215,10 @@ public extension String {
                 }
             }
             
-            
-            
             completion(String(dayStr ?? 0), String(hourStr ?? 0), String(minitStr ?? 0), String(secondStr ?? 0))
         }
         
         RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
     }
     
-    //隐藏名字(用*代替)
-    public func hideName() -> String {
-        var formatedName = ""
-        var charArr = [String]()
-        for (index, char) in self.toCharArray().enumerated() {
-            if index == 0 {
-                charArr.append(char)
-            } else {
-                charArr.append("*")
-            }
-        }
-        for char in charArr {
-            formatedName += char
-        }
-        return formatedName
-    }
-    
-    //隐藏手机号码
-    public func hidePhone() -> String {
-        var formatedPhone = ""
-        var charArr = [String]()
-        for (index, char) in self.toCharArray().enumerated() {
-            switch index {
-            case 3, 4, 5, 6:
-                charArr.append("*")
-                break
-            default:
-                charArr.append(char)
-                break
-            }
-        }
-        for char in charArr {
-            formatedPhone += char
-        }
-        return formatedPhone
-    }
 }
