@@ -11,7 +11,7 @@
 		2B8CF11CD5C6BBB8357C1BAD366ABB24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
 		41947892D723E97862A9DEA242F6C719 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE783F910AA5BE9CAC87A22BEB9C48 /* UIImageView.swift */; };
 		455B1E7E1BA3841BEFBA25FC28C49101 /* Pods-SNYKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A4E4C9D0A468EC6B808A247A60F574 /* Pods-SNYKit_Tests-dummy.m */; };
-		505452B6B87F4DE6135E305B18D3E26A /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED6C54DF38C97D9C473F6274A7DF4B1 /* Sword.swift */; };
+		505452B6B87F4DE6135E305B18D3E26A /* SNYTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED6C54DF38C97D9C473F6274A7DF4B1 /* SNYTools.swift */; };
 		578EE8FAD01C8E153EC33435DF96F529 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217AE52D60C411F396D10E9D9823070 /* Double.swift */; };
 		584004861CF18975CA5707B737B0DD71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		5965E86C2136ADE5004252B1 /* AppStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5965E86B2136ADE5004252B1 /* AppStates.swift */; };
@@ -65,7 +65,7 @@
 		2456C19966E57CDEC595738FA71B50D9 /* Pods-SNYKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNYKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		26794E8D6B81EABAE6A00CC78A0FEA03 /* Pods-SNYKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNYKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2CCC05623F9B17AF350D0BD9BD24D439 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		2ED6C54DF38C97D9C473F6274A7DF4B1 /* Sword.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
+		2ED6C54DF38C97D9C473F6274A7DF4B1 /* SNYTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SNYTools.swift; sourceTree = "<group>"; };
 		34B1051961D5F8C82A1DCA6AB9C8113C /* Pods-SNYKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNYKit_Example-dummy.m"; sourceTree = "<group>"; };
 		3529DF49D2D1C9CD6B634FCFA96BC22F /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		36859C0FF42AFE7D707980015EE5FB52 /* Pods-SNYKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNYKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -243,13 +243,13 @@
 		AE3B53B41DE24ED948655704FE543ED7 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				2ED6C54DF38C97D9C473F6274A7DF4B1 /* SNYTools.swift */,
 				5965E86F21378064004252B1 /* AlamofireManager.swift */,
 				5965E86B2136ADE5004252B1 /* AppStates.swift */,
 				0C43B2604ACFA1CCA4E2ED65D4910E4A /* GCD.swift */,
 				0CB5DD6DBEF0AD29C1203F7B890D86AE /* OCSword.h */,
 				AC4A60E9D142F7B38A47DB9793854BFB /* OCSword.m */,
 				E05CEE86499440EB5D9727ACF14BF89A /* Screen.swift */,
-				2ED6C54DF38C97D9C473F6274A7DF4B1 /* Sword.swift */,
 				BF80EB9948E4F9F80EB0972AAE7CF3E6 /* UI.swift */,
 			);
 			name = Providers;
@@ -479,7 +479,7 @@
 				EDD37E40B529C28B9C5B5A7FA12E4000 /* Screen.swift in Sources */,
 				62E5EFE779A1A4292AAEBFACF26EBC60 /* SNYKit-dummy.m in Sources */,
 				E0CF6772E0A4F1C9B0EE22FD2D425C97 /* String.swift in Sources */,
-				505452B6B87F4DE6135E305B18D3E26A /* Sword.swift in Sources */,
+				505452B6B87F4DE6135E305B18D3E26A /* SNYTools.swift in Sources */,
 				F776FF929273D4F5002E53E1C3190667 /* UI.swift in Sources */,
 				BF10A48ECA6036E7690B4FC9153F26C7 /* UIButton.swift in Sources */,
 				DF24CCFC911F16C3CF7BC18FC02F2F10 /* UIColor.swift in Sources */,
