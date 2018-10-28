@@ -27,7 +27,7 @@ public func dprint(_ item: Any) {
     #endif
 }
 
-public final class SNYTools {
+public final class SNY {
     
     // MARK: - 获取运营商信息
     public static func getCarrierName() -> (carrierName: String, countryCode: String, networkType: String)? {
@@ -35,13 +35,13 @@ public final class SNYTools {
         if let carrier = info.subscriberCellularProvider {
             let currentRadioTech = info.currentRadioAccessTechnology!
             print("数据业务信息：\(currentRadioTech)")
-            print("网络制式：\(SNYTools.getNetworkType(currentRadioTech: currentRadioTech))")
+            print("网络制式：\(SNY.getNetworkType(currentRadioTech: currentRadioTech))")
             print("运营商名字：\(carrier.carrierName ?? "unknown")")
             print("移动国家码(MCC)：\(carrier.mobileCountryCode ?? "unknown")")
             print("移动网络码(MNC)：\(carrier.mobileNetworkCode ?? "unknown")")
             print("ISO国家代码：\(carrier.isoCountryCode?.uppercased() ?? "unknown")")
             print("是否允许VoIP：\(carrier.allowsVOIP)")
-            return (carrier.carrierName ?? "unknown", carrier.mobileCountryCode ?? "unknown", SNYTools.getNetworkType(currentRadioTech: currentRadioTech))
+            return (carrier.carrierName ?? "unknown", carrier.mobileCountryCode ?? "unknown", SNY.getNetworkType(currentRadioTech: currentRadioTech))
         }
         return nil
     }
