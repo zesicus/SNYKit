@@ -10,17 +10,19 @@ import UIKit
 
 public struct AppStates {
     
-    public static var foreground: Bool {
+    public static let shared = AppStates()
+    
+    public var foreground: Bool {
         let state = UIApplication.shared.applicationState
         return state == .active
     }
     
-    public static var background: Bool {
+    public var background: Bool {
         let state = UIApplication.shared.applicationState
         return state == .background
     }
     
-    public static var inactive: Bool {
+    public var inactive: Bool {
         let state = UIApplication.shared.applicationState
         return state == .inactive
     }

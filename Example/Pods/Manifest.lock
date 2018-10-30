@@ -1,5 +1,5 @@
 PODS:
-  - SNYKit (0.1.0)
+  - SNYKit (1.0.2)
 
 DEPENDENCIES:
   - SNYKit (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SNYKit: 34bde5879acb2c1d991b502acd6b546dc75fc0c8
+  SNYKit: b25b53b23f9ad8f4b117d5484f8eaa657541379b
 
-PODFILE CHECKSUM: 74f80e53f53b2bbbca45c6ebfa5250acdf7ea85f
+PODFILE CHECKSUM: 8a0df365fb3bb7f29ab54557c657dbc3bdfb4ed9
 
 COCOAPODS: 1.5.3

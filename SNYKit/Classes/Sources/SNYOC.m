@@ -1,12 +1,12 @@
 //
-//  OCSword.m
+//  SNYOC.m
 //  NU
 //
 //  Created by Sunny on 15/05/2018.
 //  Copyright © 2018 Juejin-Inc. All rights reserved.
 //
 
-#import "OCSword.h"
+#import "SNYOC.h"
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreText/CoreText.h>
@@ -16,7 +16,7 @@ static const double ee = 0.00669342162296594323;
 static const double pi = M_PI;
 static const double xPi = M_PI  * 3000.0 / 180.0;
 
-@implementation OCSword
+@implementation SNYOC
 
 + (UIImage *)imageFromColor:(UIColor *)color corner:(Corner)corner radius:(CGFloat)radius {
     CGFloat width = MAX(10, radius * 2+2);
@@ -155,31 +155,31 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
     return self;
 }
 
-- (OCSword *)transformFromGPSToGD {
-    CLLocationCoordinate2D coor = [OCSword transformFromWGSToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
-    return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
+- (SNYOC *)transformFromGPSToGD {
+    CLLocationCoordinate2D coor = [SNYOC transformFromWGSToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
+    return [[SNYOC alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
-- (OCSword *)transformFromGDToBD {
-    CLLocationCoordinate2D coor = [OCSword transformFromGCJToBaidu:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
-    return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
+- (SNYOC *)transformFromGDToBD {
+    CLLocationCoordinate2D coor = [SNYOC transformFromGCJToBaidu:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
+    return [[SNYOC alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
-- (OCSword *)transformFromBDToGD {
-    CLLocationCoordinate2D coor = [OCSword transformFromBaiduToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
-    return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
+- (SNYOC *)transformFromBDToGD {
+    CLLocationCoordinate2D coor = [SNYOC transformFromBaiduToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
+    return [[SNYOC alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
-- (OCSword *)transformFromGDToGPS {
-    CLLocationCoordinate2D coor = [OCSword transformFromGCJToWGS:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
-    return [[OCSword alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
+- (SNYOC *)transformFromGDToGPS {
+    CLLocationCoordinate2D coor = [SNYOC transformFromGCJToWGS:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
+    return [[SNYOC alloc] initWithLatitude:coor.latitude andLongitude:coor.longitude];
 }
 
 - (id)transformFromBDToGPS {
     //先把百度转化为高德
-    CLLocationCoordinate2D start_coor = [OCSword transformFromBaiduToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
-    CLLocationCoordinate2D end_coor = [OCSword transformFromGCJToWGS:CLLocationCoordinate2DMake(start_coor.latitude, start_coor.longitude)];
-    return [[OCSword alloc] initWithLatitude:end_coor.latitude andLongitude:end_coor.longitude];
+    CLLocationCoordinate2D start_coor = [SNYOC transformFromBaiduToGCJ:CLLocationCoordinate2DMake(self.latitude, self.longitude)];
+    CLLocationCoordinate2D end_coor = [SNYOC transformFromGCJToWGS:CLLocationCoordinate2DMake(start_coor.latitude, start_coor.longitude)];
+    return [[SNYOC alloc] initWithLatitude:end_coor.latitude andLongitude:end_coor.longitude];
 }
 
 + (CLLocationCoordinate2D)transformFromWGSToGCJ:(CLLocationCoordinate2D)wgsLoc {
@@ -345,7 +345,7 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
 
 + (void)jumpAnimationView:(UIView *)sender {
     
-    CGFloat duration = 2.f * [OCSword getRandomNumber:1 to:3] + [OCSword getRandomNumber:1 to:9] / 10;
+    CGFloat duration = 2.f * [SNYOC getRandomNumber:1 to:3] + [SNYOC getRandomNumber:1 to:9] / 10;
     CGFloat height = 10.f;
     
     CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class GCD {
+open class GCD {
     
     public static let shared = GCD()
     
@@ -25,7 +25,7 @@ public class GCD {
         }
     }
     
-    private static func afterTime(time: Double) -> DispatchTime {
+    fileprivate static func afterTime(time: Double) -> DispatchTime {
         return DispatchTime.now() + time
     }
     
@@ -39,7 +39,7 @@ public class GCD {
     ///   - queue: 队列
     ///   - repeats: 是否重复
     ///   - action: 执行任务的闭包
-    public func scheduledDispatchTimer(WithTimerName name: String?, timeInterval: Double, queue: DispatchQueue, repeats: Bool, action: @escaping () -> Void) {
+    open func scheduledDispatchTimer(WithTimerName name: String?, timeInterval: Double, queue: DispatchQueue, repeats: Bool, action: @escaping () -> Void) {
         
         if name == nil {
             return
@@ -64,7 +64,7 @@ public class GCD {
     /// 取消定时器
     ///
     /// - Parameter name: 定时器名字
-    public func cancleTimer(WithTimerName name: String?) {
+    open func cancleTimer(WithTimerName name: String?) {
         let timer = timerContainer[name!]
         if timer == nil {
             return
@@ -78,7 +78,7 @@ public class GCD {
     ///
     /// - Parameter name: 定时器名字
     /// - Returns: 是否已经存在定时器
-    public func isExistTimer(WithTimerName name: String?) -> Bool {
+    open func isExistTimer(WithTimerName name: String?) -> Bool {
         if timerContainer[name!] != nil {
             return true
         }

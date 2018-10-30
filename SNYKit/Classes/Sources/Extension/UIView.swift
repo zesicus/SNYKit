@@ -14,7 +14,7 @@ public extension UIView {
     public func animateIn(parentVC: UIViewController, with backgroundView: UIView? = nil) {
         if backgroundView != nil {
             backgroundView!.backgroundColor = UIColor.black.withAlphaComponent(0)
-            backgroundView!.frame = Screen.frame
+            backgroundView!.frame = SNY.screen.frame
             parentVC.view.addSubview(backgroundView!)
         }
         parentVC.view.addSubview(self)

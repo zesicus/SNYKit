@@ -10,8 +10,8 @@ import Foundation
 /*
 import Alamofire
 
-class LongTimeoutAlamofireManager: Alamofire.SessionManager {
-    static let sharedManager: LongTimeoutAlamofireManager = {
+open class LongTimeoutAlamofireManager: Alamofire.SessionManager {
+    open static let sharedManager: LongTimeoutAlamofireManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         configuration.timeoutIntervalForRequest = 600 // as seconds, you can set your request timeout

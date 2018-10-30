@@ -1,5 +1,5 @@
 //
-//  OCSword.h
+//  SNY.h
 //  NU
 //
 //  Created by Sunny on 15/05/2018.
@@ -21,16 +21,10 @@ typedef enum{
     CornerAll = (0x1 << 4) - 1,
 }Corner;
 
-@interface OCSword : NSObject
+@interface SNYOC : NSObject
 
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
-
-//颜色生成图片
-+ (UIImage *)imageFromColor:(UIColor *)color corner:(Corner)corner radius:(CGFloat)radius;
-
-//上面的便利方法
-+ (UIImage *)createImageWithColor:(UIColor *)color;
 
 //把你想变颜色的字列出来，当然你只能传单个字符的数组进去
 + (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color;
@@ -58,19 +52,19 @@ typedef enum{
  */
 
 #pragma mark - 从GPS坐标转化到高德坐标
-- (OCSword *)transformFromGPSToGD;
+- (SNYOC *)transformFromGPSToGD;
 
 #pragma mark - 从高德坐标转化到百度坐标
-- (OCSword *)transformFromGDToBD;
+- (SNYOC *)transformFromGDToBD;
 
 #pragma mark - 从百度坐标到高德坐标
-- (OCSword *)transformFromBDToGD;
+- (SNYOC *)transformFromBDToGD;
 
 #pragma mark - 从高德坐标到GPS坐标
-- (OCSword *)transformFromGDToGPS;
+- (SNYOC *)transformFromGDToGPS;
 
 #pragma mark - 从百度坐标到GPS坐标
-- (OCSword *)transformFromBDToGPS;
+- (SNYOC *)transformFromBDToGPS;
 
 //取得Label里文字数组
 + (NSArray *)getLinesArrayOfStringInLabel:(UILabel *)label;

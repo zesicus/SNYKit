@@ -5,7 +5,6 @@ target 'SNYKit_Example' do
 
   target 'SNYKit_Tests' do
     inherit! :search_paths
-
     
   end
 end
