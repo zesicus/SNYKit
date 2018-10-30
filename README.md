@@ -31,7 +31,7 @@ SNYKit有一个方法总集 --> SNY，以及对于UIKit基础类的扩展。
 ### *SNY* 🍋
 
 <details>
- <summary>**Debug环境打印函数**</summary>
+ <summary>Debug环境打印函数</summary>
  
  ```Swift
  dprint("hello")
@@ -40,7 +40,7 @@ SNYKit有一个方法总集 --> SNY，以及对于UIKit基础类的扩展。
 </details> 
 
 <details>
- <summary>**App状态判断**</summary>
+ <summary>App状态判断</summary>
 
 ```Swift
 //判断App是否在前台并且能有效接收事件
@@ -60,7 +60,7 @@ SNY.appStates.isInactive
 </details>
 
 <details>
- <summary>**屏幕尺寸**</summary>
+ <summary>屏幕尺寸</summary>
  
  * 不说你们都懂得
  
@@ -76,7 +76,7 @@ SNY.screen.scale
 
 
 <details>
- <summary>**GCD定时器**</summary>
+ <summary>GCD定时器</summary>
  
 * 主线程 `GCD.main`
 * 高优先后台线程 `GCD.globalHigh`
@@ -114,7 +114,7 @@ SNY.gcd.cancleTimer(WithTimerName: "hello")
 </details>
 
 <details>
- <summary>**App版本**</summary>
+ <summary>App版本</summary>
  
  ```Swift
  SNY.appVersion
@@ -123,7 +123,7 @@ SNY.gcd.cancleTimer(WithTimerName: "hello")
 </details> 
 
 <details>
- <summary>**UserDefaults**</summary>
+ <summary>UserDefaults</summary>
  
  ```Swift
  SNY.defaults.set...
@@ -132,7 +132,7 @@ SNY.gcd.cancleTimer(WithTimerName: "hello")
 </details> 
 
 <details>
- <summary>**NotificationCenter**</summary>
+ <summary>NotificationCenter</summary>
  
  ```Swift
  SNY.defaultNoti.post...
@@ -141,7 +141,7 @@ SNY.gcd.cancleTimer(WithTimerName: "hello")
 </details> 
 
 <details>
- <summary>**设备UUID**</summary>
+ <summary>设备UUID</summary>
  
  ```Swift
  SNY.uuid
@@ -150,7 +150,7 @@ SNY.gcd.cancleTimer(WithTimerName: "hello")
 </details> 
 
 <details>
- <summary>**Documents文件夹路径**</summary>
+ <summary>Documents文件夹路径</summary>
  
  ```Swift
 SNY.documentsPath
@@ -159,7 +159,7 @@ SNY.documentsPath
 </details> 
 
 <details>
- <summary>**运营商信息**</summary>
+ <summary>运营商信息</summary>
  
  返回一个元祖，包含 
  
