@@ -12,7 +12,7 @@ public extension UIImage {
     //压缩图片
     public func compressImage(toByte maxLength: Int) -> UIImage {
         var compression: CGFloat = 1
-        guard var data = UIImageJPEGRepresentation(self, compression),
+        guard var data = self.jpegData(compressionQuality: compression),
             data.count > maxLength else { return self }
         
         // Compress by size
@@ -20,7 +20,7 @@ public extension UIImage {
         var min: CGFloat = 0
         for _ in 0..<6 {
             compression = (max + min) / 2
-            data = UIImageJPEGRepresentation(self, compression)!
+            data = self.jpegData(compressionQuality: compression)!
             if CGFloat(data.count) < CGFloat(maxLength) * 0.9 {
                 min = compression
             } else if data.count > maxLength {
@@ -43,7 +43,7 @@ public extension UIImage {
             resultImage.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
             resultImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
-            data = UIImageJPEGRepresentation(resultImage, compression)!
+            data = resultImage.jpegData(compressionQuality: compression)!
         }
         return resultImage
     }

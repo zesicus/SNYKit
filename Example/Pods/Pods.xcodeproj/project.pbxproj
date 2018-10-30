@@ -74,7 +74,7 @@
 		4977E1CDEDB27FFABE7BAF725AE36306 /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4CCD63C791A8E34DC6262D6F012AA03F /* Pods-SNYKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNYKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		529CA7B0296CF7A8E7F69875F2353C50 /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		5B9994F852922382189715ED2B462A24 /* Pods_SNYKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SNYKit_Example.framework; path = "Pods-SNYKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9994F852922382189715ED2B462A24 /* Pods_SNYKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNYKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C38304552D5B5743A4028D0A8B67BE6 /* SNYKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNYKit-umbrella.h"; sourceTree = "<group>"; };
 		5D001AE2FFD0708A2ED5CE503A8E5E2E /* UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		5F4BE12C0796AD455FC42D63B36F31C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,18 +83,18 @@
 		78A1431BA1FE379D02A01A7A4512E919 /* AlamofireManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		7AFD47E62BF19B7A32EB15E937ACE063 /* UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		82473206E7063A1D132697F268D786F6 /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		84869C13A5C2CAF7B1B6F60A238B882F /* Pods_SNYKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SNYKit_Tests.framework; path = "Pods-SNYKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84869C13A5C2CAF7B1B6F60A238B882F /* Pods_SNYKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNYKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89ABCB5D6B413B94F5EDC12C1F4F0D39 /* SNYKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SNYKit-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		958489F9A4B91CD8297228A05EE4FFE1 /* Pods-SNYKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SNYKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9AD88DA8889DB6F1CD65EF6A43FF6ECE /* SNYKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SNYKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AD88DA8889DB6F1CD65EF6A43FF6ECE /* SNYKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SNYKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CDCBCA23A0650157B758299CD8C8B31 /* SNY.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNY.swift; path = SNYKit/Classes/Sources/SNY.swift; sourceTree = "<group>"; };
-		A2375043D6E7F22AFCF03BD912E52DBB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A2375043D6E7F22AFCF03BD912E52DBB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ABD2D3B6EDA03F0BA05F34903353BD61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0EAFD1474418075F00A421EFE433AE1 /* Screen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		B1C8BE780CD30476FAC051680E43B7C7 /* SNYOC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNYOC.m; path = SNYKit/Classes/Sources/SNYOC.m; sourceTree = "<group>"; };
 		B2E08B9F020D68616C597DEE4A3A0F67 /* UIButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		B403598DCC499943E983BFF12C643AC7 /* SNYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SNYKit.framework; path = SNYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B403598DCC499943E983BFF12C643AC7 /* SNYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53D6FD5AD145C3D1258F9A5E2EB2853 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BB498301884E634EA13ACA9764F3E66C /* UserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		BB70C9FF26003C86923C41FCC3CD960B /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		D38C0945E84E41FEA2A3346169C10BDE /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		D3A86793737CD41319988D0AC4C263E1 /* Pods-SNYKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNYKit_Example-resources.sh"; sourceTree = "<group>"; };
 		D4836BC06B000DEB1F324E149DE41C12 /* Pods-SNYKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SNYKit_Example.modulemap"; sourceTree = "<group>"; };
-		E12A7C7E4D83DDAACCF4E749C9C2F22C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E12A7C7E4D83DDAACCF4E749C9C2F22C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E41F89B9EE4E2754FEF58E712F3CDB77 /* Pods-SNYKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNYKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E5877D343C01E16DFB789DA9D45AA377 /* SNYKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SNYKit.modulemap; sourceTree = "<group>"; };
 		E72F6EE59E2FB92E02CB8485A2B227BC /* SNYKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SNYKit-dummy.m"; sourceTree = "<group>"; };
@@ -401,6 +401,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					F1064122BEDD7252F77F456722398354 = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -695,8 +700,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -759,7 +763,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.1;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -824,7 +828,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.1;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

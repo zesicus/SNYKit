@@ -36,7 +36,7 @@ public extension String {
     
     //获取字符串宽度
     public func getWidth(size: CGFloat) -> CGFloat {
-        return self.size(withAttributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: size)]).width
+        return self.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: size)]).width
     }
     
     public var html2AttributedString: NSAttributedString? {
@@ -59,17 +59,17 @@ public extension String {
         //调整行间距
         paragraphStye.lineSpacing = lineSpacing
         paragraphStye.lineBreakMode = NSLineBreakMode.byWordWrapping
-        let attributedString = NSMutableAttributedString.init(string: self, attributes: [NSAttributedStringKey.paragraphStyle:paragraphStye, NSAttributedStringKey.kern: charSpacing])
+        let attributedString = NSMutableAttributedString.init(string: self, attributes: [NSAttributedString.Key.paragraphStyle:paragraphStye, NSAttributedString.Key.kern: charSpacing])
         //*******  Additional 将 [展开] 颜色变掉   *******
         let speStr = "[展开]"
         let theStr = self.substring(fromIndex: self.count - 4)
         if speStr == theStr {
-            attributedString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.blue], range: NSMakeRange(self.count - 4, 4))
+            attributedString.setAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], range: NSMakeRange(self.count - 4, 4))
         }
         let otherSpeStr = "[收起]"
         let otherStr = self.substring(fromIndex: self.count - 4)
         if otherSpeStr == otherStr {
-            attributedString.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.blue], range: NSMakeRange(self.count - 4, 4))
+            attributedString.setAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue], range: NSMakeRange(self.count - 4, 4))
         }
         //**************************************************
         return attributedString
@@ -218,7 +218,7 @@ public extension String {
             completion(String(dayStr ?? 0), String(hourStr ?? 0), String(minitStr ?? 0), String(secondStr ?? 0))
         }
         
-        RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
     }
     
 }
