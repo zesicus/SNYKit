@@ -25,6 +25,9 @@ open class SNY {
     // MARK: - 屏幕尺寸
     public static let screen = Screen.shared
     
+    // MARK: - GCD
+    public static let gcd = GCD.shared
+    
     // MARK: - App当前版本
     public static let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     
@@ -38,7 +41,7 @@ open class SNY {
     public static let uuid = UIDevice.current.identifierForVendor?.uuidString
     
     // MARK: - Documents目录位置
-    public static var documentsDirectory: URL = {
+    public static var documentsPath: URL = {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count - 1]
     }()
@@ -59,7 +62,7 @@ open class SNY {
     }
     
     // MARK: - 获取运营商信息
-    open class func getCarrierName() -> (carrierName: String, countryCode: String, networkType: String)? {
+    open class func getCarrier() -> (carrierName: String, countryCode: String, networkType: String)? {
         let info = CTTelephonyNetworkInfo()
         if let carrier = info.subscriberCellularProvider {
             let currentRadioTech = info.currentRadioAccessTechnology!

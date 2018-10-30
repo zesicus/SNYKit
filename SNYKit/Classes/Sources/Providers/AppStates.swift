@@ -12,17 +12,17 @@ public struct AppStates {
     
     public static let shared = AppStates()
     
-    public var foreground: Bool {
+    public var isForeground: Bool {
         let state = UIApplication.shared.applicationState
         return state == .active
     }
     
-    public var background: Bool {
+    public var isBackground: Bool {
         let state = UIApplication.shared.applicationState
         return state == .background
     }
     
-    public var inactive: Bool {
+    public var isInactive: Bool {
         let state = UIApplication.shared.applicationState
         return state == .inactive
     }

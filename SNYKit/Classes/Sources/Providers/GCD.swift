@@ -16,16 +16,20 @@ open class GCD {
     public static let main = DispatchQueue.main
     public static let global = DispatchQueue.global()
     public static let globalHigh = DispatchQueue.global(qos: .userInteractive)
-    public static let seria = DispatchQueue(label: "com.nuggets.nu")
-    public static let concurrent = DispatchQueue(label: "com.nuggets.nu", qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+    public static func seria(label: String) -> DispatchQueue {
+        return DispatchQueue(label: label)
+    }
+    public static func concurrent(label: String) -> DispatchQueue {
+        return DispatchQueue(label: label, qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+    }
     
-    public static func after(time: Double, queue: DispatchQueue, callBack: @escaping () -> Void) {
-        queue.asyncAfter(deadline: GCD.afterTime(time: time)) {
+    open func after(time: Double, queue: DispatchQueue, callBack: @escaping () -> Void) {
+        queue.asyncAfter(deadline: afterTime(time: time)) {
             callBack()
         }
     }
     
-    fileprivate static func afterTime(time: Double) -> DispatchTime {
+    func afterTime(time: Double) -> DispatchTime {
         return DispatchTime.now() + time
     }
     
