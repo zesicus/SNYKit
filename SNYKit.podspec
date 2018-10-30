@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNYKit'
-  s.version          = '1.0.2'
+  s.version          = '2.0'
   s.summary          = 'Sunny的便利工具集.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-日常使用，里面加入了很多自己经常用到的依赖库，还有一些便利的方法等集合。
+日常使用，一般App常用到的方法汇总，不断扩充完善中。
                        DESC
 
   s.homepage         = 'https://github.com/zesicus/SNYKit'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 
   s.source_files = 'SNYKit/Classes/**/*'
   
