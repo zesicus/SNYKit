@@ -65,20 +65,24 @@ open class SNY {
     open class func getCarrier() -> (carrierName: String, countryCode: String, networkType: String)? {
         let info = CTTelephonyNetworkInfo()
         if let carrier = info.subscriberCellularProvider {
-            let currentRadioTech = info.currentRadioAccessTechnology!
-            dprint("数据业务信息：\(currentRadioTech)")
-            dprint("网络制式：\(SNY.getNetworkType(currentRadioTech: currentRadioTech))")
-            dprint("运营商名字：\(carrier.carrierName ?? "unknown")")
-            dprint("移动国家码(MCC)：\(carrier.mobileCountryCode ?? "unknown")")
-            dprint("移动网络码(MNC)：\(carrier.mobileNetworkCode ?? "unknown")")
-            dprint("ISO国家代码：\(carrier.isoCountryCode?.uppercased() ?? "unknown")")
-            dprint("是否允许VoIP：\(carrier.allowsVOIP)")
-            return (carrier.carrierName ?? "unknown", carrier.mobileCountryCode ?? "unknown", SNY.getNetworkType(currentRadioTech: currentRadioTech))
+            if let currentRadioTech = info.currentRadioAccessTechnology {
+                dprint("数据业务信息：\(currentRadioTech)")
+                dprint("网络制式：\(SNY.getNetworkType(currentRadioTech: currentRadioTech))")
+                dprint("运营商名字：\(carrier.carrierName ?? "unknown")")
+                dprint("移动国家码(MCC)：\(carrier.mobileCountryCode ?? "unknown")")
+                dprint("移动网络码(MNC)：\(carrier.mobileNetworkCode ?? "unknown")")
+                dprint("ISO国家代码：\(carrier.isoCountryCode?.uppercased() ?? "unknown")")
+                dprint("是否允许VoIP：\(carrier.allowsVOIP)")
+                return (carrier.carrierName ?? "unknown", carrier.mobileCountryCode ?? "unknown", SNY.getNetworkType(currentRadioTech: currentRadioTech))
+            }
         }
         return nil
     }
     
-    open class func getNetworkType(currentRadioTech: String) -> String {
+    open class func getNetworkType(currentRadioTech: String?) -> String {
+        if currentRadioTech == nil {
+            return "unknown"
+        }
         var networkType = ""
         switch currentRadioTech {
         case CTRadioAccessTechnologyGPRS:
