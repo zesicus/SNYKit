@@ -5,13 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/SNYKit.svg?style=flat)](https://cocoapods.org/pods/SNYKit)
 [![Platform](https://img.shields.io/cocoapods/p/SNYKit.svg?style=flat)](https://cocoapods.org/pods/SNYKit)
 
-## 说明
+## About
 
 日常开发逐渐积累下来的一个 iOS 便利工具集。
 
 主要使用 Swift，还有一些用到的基于 OC 的方法（很多从大环境搜集到的方法，经自己测试和修改确保可用且应用于项目，并在此对借鉴代码的作者们说声谢谢！🙏）。
 
-## 安装方法
+## Installation
 
 可以通过 [CocoaPods](https://cocoapods.org) 的方式去安装：
 
@@ -19,11 +19,11 @@
 # Swift 4.2 版本
 pod 'SNYKit'
 
-# Swift 4.1 版本，请移步
+# Swift 4.1 版本
 pod 'SNYKit', '1.0.2'
 ```
 
-## 使用说明
+## How to Use
 
 SNYKit有一个方法总集 --> SNY，以及对于UIKit基础类的扩展。
 下面是详细介绍⤵：
@@ -175,7 +175,9 @@ SNY.getCarrier()
 </details> 
 
 <details>
- <summary>网络权限获取</summary>
+ <summary>设备使用权限判断</summary>
+ 
+ * 网络使用权限
  
  ```Swift
  switch SNY.netPermission {
@@ -193,7 +195,87 @@ SNY.getCarrier()
  }
  ```
  
+ * 相册使用权限
+
+ ```Swift
+ switch SNY.photoAlbumPermission {
+    case .authorized:
+        dprint("已授权")
+        break
+    case .denied:
+        dprint("已阻止")
+        break
+    case .notDetermined:
+        dprint("未知")
+        break
+    case .restricted:
+        dprint("未授权，可能是家长控制权限")
+        break
+ }
+ ```
+ 
+ * 相机使用权限
+
+ ```Swift
+ switch SNY.cameraPermission {
+    case .authorized:
+        dprint("已授权相机")
+        break
+    case .denied:
+        dprint("拒绝使用相机")
+        break
+    case .restricted:
+        dprint("受限制的")
+        break
+    case .notDetermined:
+        dprint("系统未知，可能第一次开启app时状态是这样的")
+        break
+ }
+ ```
+ 
+ * 麦克风使用权限
+
+ ```Swift
+ switch SNY.microphonePermission {
+    case .authorized:
+        dprint("已授权麦克风")
+        break
+    case .denied:
+        dprint("已拒绝麦克风")
+        break
+    case .restricted:
+        dprint("受限制的")
+        break
+    case .notDetermined:
+        dprint("系统未知，可能第一次开启app时状态是这样的")
+        break
+ }
+ ```
+ 
+ * 推送权限
+
+ ```Swift
+ if SNY.pushPermission {
+     dprint("推送已开启")
+ } else {
+     dprint("推送未开启/未知")
+ }
+ ```
+ 
+ * 定位权限
+
+ ```Swift
+ if SNY.locationPermission {
+     dprint("GPS可用")
+ } else {
+     dprint("GPS不可用")
+ }
+ ```
+ 
+ 
 </details> 
+ 
+
 ### *SNYOC* 🌶
 
 <details>

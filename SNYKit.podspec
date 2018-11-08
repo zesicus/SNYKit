@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNYKit'
-  s.version          = '2.0.2'
+  s.version          = '2.1'
   s.summary          = 'Sunny的便利工具集.'
 
 # This description is used to generate tags and improve search results.
@@ -39,4 +39,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'Moya', '10.0.0'
+  s.dependency 'ReachabilitySwift', '~> 4.3.0'
 end

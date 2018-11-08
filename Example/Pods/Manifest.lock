@@ -1,15 +1,22 @@
 PODS:
-  - SNYKit (2.0)
+  - ReachabilitySwift (4.3.0)
+  - SNYKit (2.0.2):
+    - ReachabilitySwift (~> 4.3.0)
 
 DEPENDENCIES:
   - SNYKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ReachabilitySwift
 
 EXTERNAL SOURCES:
   SNYKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SNYKit: b4906427a4897953c0742a047a03a06a59a0aac6
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  SNYKit: 630dcb8de08814dfcd8f3d78b275719c4ecb2f7b
 
 PODFILE CHECKSUM: 8a0df365fb3bb7f29ab54557c657dbc3bdfb4ed9
 

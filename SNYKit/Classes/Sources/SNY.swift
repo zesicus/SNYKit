@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreTelephony
+import Reachability
+import Photos
+import AVFoundation
 
 // 无Release打印
 public func dprint(_ item: Any) {
@@ -121,11 +124,52 @@ open class SNY {
         return networkType
     }
     
-    //获取网络权限
-    public static var netPermission: CTCellularDataRestrictedState {
-        let cellularData = CTCellularData()
-        let status = cellularData.restrictedState
+    // MARK: - 权限
+    
+    //网络类型 (或用于权限判断)
+    public static var networkType: Reachability.Connection {
+        let reachability = Reachability()!
+        return reachability.connection
+    }
+    
+    //相册权限
+    public static var photoAlbumPermission: PHAuthorizationStatus {
+        let status = PHPhotoLibrary.authorizationStatus()
         return status
+    }
+    
+    //相机权限
+    public static var cameraPermission: AVAuthorizationStatus {
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        return status
+    }
+    
+    //麦克风权限
+    public static var microphonePermission: AVAuthorizationStatus {
+        let status = AVCaptureDevice.authorizationStatus(for: .audio)
+        return status
+    }
+    
+    //推送权限
+    public static var pushPermission: Bool {
+        if UIApplication.shared.currentUserNotificationSettings == nil {
+            return false
+        } else {
+            if Int(UIApplication.shared.currentUserNotificationSettings!.types.rawValue) == 0 {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+    
+    //判断GPS服务是否可用
+    public static var locationPermission: Bool {
+        if CLLocationManager.locationServicesEnabled() && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
+            return true
+        } else {
+            return false
+        }
     }
     
 }
