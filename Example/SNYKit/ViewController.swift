@@ -14,9 +14,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SNY.getCarrier()
-        
-        
+        switch SNY.netPermission {
+        case .notRestricted:
+            dprint("无限制")
+            break
+        case .restricted:
+            dprint("网络限制")
+            break
+        case .restrictedStateUnknown:
+            dprint("权限未知")
+            break
+        default:
+            break
+        }
         
     }
 

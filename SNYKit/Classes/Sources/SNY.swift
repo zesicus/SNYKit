@@ -121,4 +121,11 @@ open class SNY {
         return networkType
     }
     
+    //获取网络权限
+    public static var netPermission: CTCellularDataRestrictedState {
+        let cellularData = CTCellularData()
+        let status = cellularData.restrictedState
+        return status
+    }
+    
 }
