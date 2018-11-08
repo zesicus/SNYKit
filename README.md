@@ -174,6 +174,26 @@ SNY.getCarrier()
  
 </details> 
 
+<details>
+ <summary>网络权限获取</summary>
+ 
+ ```Swift
+ switch SNY.netPermission {
+    case .notRestricted:
+        dprint("无限制")
+        break
+    case .restricted:
+        dprint("网络限制")
+        break
+    case .restrictedStateUnknown:
+        dprint("未设置过网络权限时是这个状态")
+        break
+    default:
+        break
+ }
+ ```
+ 
+</details> 
 ### *SNYOC* 🌶
 
 <details>
