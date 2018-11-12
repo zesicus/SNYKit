@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		762FA77D2199857200FBF321 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 762FA77C219983E600FBF321 /* iconfont.ttf */; };
 		920AE513B7E10B0A3E22E23C /* Pods_SNYKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC177548AA42531CD26E6597 /* Pods_SNYKit_Tests.framework */; };
 		F60306B4FC39E930AED6A384 /* Pods_SNYKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC5CB8D44ABD3E0D5564C68 /* Pods_SNYKit_Example.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		76076A23218808C3007A63EE /* SNYKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNYKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		762FA77C219983E600FBF321 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		7C3230FB5646738D1791ECF1 /* Pods-SNYKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNYKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNYKit_Example/Pods-SNYKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		87D259B88547CBDF25B75654 /* Pods-SNYKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNYKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNYKit_Example/Pods-SNYKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		87E688FBE0DCC1C0D0FAE117 /* SNYKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SNYKit.podspec; path = ../SNYKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -120,6 +122,7 @@
 		607FACD21AFB9204008FA782 /* Example for SNYKit */ = {
 			isa = PBXGroup;
 			children = (
+				762FA77C219983E600FBF321 /* iconfont.ttf */,
 				76076A23218808C3007A63EE /* SNYKit_Example-Bridging-Header.h */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -178,7 +181,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				46ED40F7852BB3F01CEFDA2F /* [CP] Embed Pods Frameworks */,
+				39A1C3F033828AB7DAAECB78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762FA77D2199857200FBF321 /* iconfont.ttf in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -271,7 +275,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46ED40F7852BB3F01CEFDA2F /* [CP] Embed Pods Frameworks */ = {
+		39A1C3F033828AB7DAAECB78 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

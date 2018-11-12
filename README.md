@@ -284,13 +284,13 @@ SNY.getCarrier()
  * 改变字符串中个别字符的颜色
 
 ```Swift
-OCSword.returnColorfulString("确认授权并同意《用户授权协议》", keyword: "《用户授权协议》", color: .mainTheme)
+SNYOC.returnColorfulString("确认授权并同意《用户授权协议》", keyword: "《用户授权协议》", color: .mainTheme)
 ```
 
 * 改变字符串中许多字符的颜色，比如只把字符串中的数字变色
 
 ```Swift
-OCSword.returnColorfulString("我是\(Profile.nickName ?? "")，掘金联盟第 \(rankNum) 号成员", which: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], color: .mainTheme)
+SNYOC.returnColorfulString("我是\(Profile.nickName ?? "")，掘金联盟第 \(rankNum) 号成员", which: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], color: .mainTheme)
 ```
  
 </details> 
@@ -302,7 +302,7 @@ OCSword.returnColorfulString("我是\(Profile.nickName ?? "")，掘金联盟第 
  * 给你的Layer加一个过渡效果，这样比如Push出来的页面会有不同动画效果，方法里面有详细说明
 
 ```Swift
-OCSword.addAnimation(self.view.layer, type: "rotate")
+SNYOC.addAnimation(self.view.layer, type: "rotate")
 ```
  
 </details>  
@@ -314,7 +314,7 @@ OCSword.addAnimation(self.view.layer, type: "rotate")
  * 生成整个View截图，当然如果想截长图传个ScrollView就好了
 
 ```Swift
-OCSword.generateImage(from: self.tableView, size: self.tableView.contentSize)
+SNYOC.generateImage(from: self.tableView, size: self.tableView.contentSize)
 ```
  
 </details>   
@@ -326,7 +326,7 @@ OCSword.generateImage(from: self.tableView, size: self.tableView.contentSize)
 * 输入日期显示星期几
 
 ```Swift
-OCSword.getWeek(Date())
+SNYOC.getWeek(Date())
 ```
  
 </details>   
@@ -368,7 +368,7 @@ snyoc?.transformFromBDToGPS().longitude
  * 取得当前显示Label里文字数组，或许你可以拿来判断一下行数，然后判断展开收缩
 
 ```Swift
-OCSword.getLinesArrayOfString(in: cell?.detailLabel)
+SNYOC.getLinesArrayOfString(in: cell?.detailLabel)
 ```
  
 </details>
@@ -380,7 +380,7 @@ OCSword.getLinesArrayOfString(in: cell?.detailLabel)
  * 跳动的View，加载多个类似于蚂蚁森林的感觉
 
 ```Swift
-OCSword.jumpAnimationView(jumpView)
+SNYOC.jumpAnimationView(jumpView)
 ```
  
 </details>
@@ -392,7 +392,7 @@ OCSword.jumpAnimationView(jumpView)
  * 返回 true 或 false
  
 ```Swift
-OCSword.checkTel("12345")
+SNYOC.checkTel("12345")
 ```
  
 </details> 
