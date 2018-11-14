@@ -605,15 +605,40 @@ addLefttBarButtonItem(navigationItem, image: #imageLiteral(resourceName: "bar_se
 //右导航栏图片按钮
 addRightBarButtonItem(navigationItem, image: #imageLiteral(resourceName: "bar_post"), target: self, action: #selector(rightBtnAction))
 
-//左导航栏文字按钮
+//左导航栏IconFont按钮
+addIconFontLeftBarButtonItem(navigationItem, unicode: "\u{e604}", color: .white, target: self, action: #selector(h))
+
+//右导航栏IconFont按钮
+addIconFontRightBarButtonItem(navigationItem, unicode: "\u{e604}", color: .white, target: self, action: #selector(h))
+
+//左导航栏多个文字按钮
 addLeftBarButtonItem(navigationItem, title: "左按钮", titleColor: .red, target: self, action: #selector(leftAction))
 
-//右导航栏文字按钮
+//右导航栏多个文字按钮
 addRightBarButtonItem(navigationItem, title: "右按钮", titleColor: .blue, target: self, action: #selector(rightAction))
+
+//左导航栏多个文字按钮
+addIconFontLeftBarButtonItems(navigationItem, unicodes: ["\u{e604}", "\u{e604}", "\u{e604}"], colors: Array.init(repeating: .white, count: 3), dist: 20, target: self, action: [#selector(h), #selector(h), #selector(h)])
+
+//右导航栏多个文字按钮
+addIconFontRightBarButtonItems(navigationItem, unicodes: ["\u{e604}", "\u{e604}", "\u{e604}"], colors: Array.init(repeating: .white, count: 3), dist: 20, target: self, action: [#selector(h), #selector(h), #selector(h)])
+
 ```
 
 </details> 
 
+<details>
+ <summary>UITextField</summary>
+
+* 设置 Placeholder，颜色，字体可选
+
+```Swift
+field.setPlaceholder("hello", color: .red)
+field.setPlaceholder("hello", font: UIFont.systemFont(ofSize: 30))
+field.setPlaceholder("hello", color: .red, font: UIFont.systemFont(ofSize: 50))
+```
+ 
+</details>
 
 
 ## License
