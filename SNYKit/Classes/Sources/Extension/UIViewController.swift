@@ -107,7 +107,7 @@ public extension UIViewController {
                 items.append(fixBar)
             }
         }
-        navigationItem.rightBarButtonItems = items
+        navigationItem.rightBarButtonItems = items.reversed()
     }
     
     //单按钮提示
