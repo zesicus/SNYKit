@@ -44,6 +44,9 @@ typedef enum{
 //便利的，加载经纬度方法，只是对公有变量赋值而已
 - (id)initWithLatitude:(double)latitude andLongitude:(double)longitude;
 
+//颜色生成图片
++ (UIImage *)createImageWithColor:(UIColor *)color;
+
 /*
  坐标系：
  WGS-84：是国际标准，GPS坐标（Google Earth使用、或者GPS模块）
