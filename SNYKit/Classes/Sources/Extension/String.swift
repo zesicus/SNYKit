@@ -172,6 +172,26 @@ public extension String {
         return formatedPhone
     }
     
+    //隐藏身份证号
+    public var hideIDCardNo: String {
+        var formatedIDCardNo = ""
+        var charArr = [String]()
+        for (index, char) in self.toCharArray().enumerated() {
+            switch index {
+            case 4, 5, 6, 7, 8, 9, 10, 11, 12, 13:
+                charArr.append("*")
+                break
+            default:
+                charArr.append(char)
+                break
+            }
+        }
+        for char in charArr {
+            formatedIDCardNo += char
+        }
+        return formatedIDCardNo
+    }
+    
     //倒计时
     @available (iOS 10.0, *)
     public func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
