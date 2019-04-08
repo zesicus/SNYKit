@@ -18,6 +18,12 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
 
 @implementation SNYOC
 
+// View深复制
++ (UIView *)copyView:(UIView *)view {
+    NSData * tempArchive = [NSKeyedArchiver archivedDataWithRootObject:view];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:tempArchive];
+}
+
 + (UIImage *)imageFromColor:(UIColor *)color corner:(Corner)corner radius:(CGFloat)radius {
     CGFloat width = MAX(10, radius * 2+2);
     UIImage *image = nil;

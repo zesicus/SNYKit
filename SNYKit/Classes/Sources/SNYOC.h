@@ -78,4 +78,7 @@ typedef enum{
 //检查手机号到底是不是手机号
 + (BOOL)checkTel:(NSString *)str;
 
+// View深复制
++ (UIView *)copyView:(UIView *)view;
+
 @end

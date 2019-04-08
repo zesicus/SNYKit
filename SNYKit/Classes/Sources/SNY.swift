@@ -172,4 +172,19 @@ open class SNY {
         }
     }
     
+    
+    // Kingfisher 功能
+    /* download pic
+    func downloadImage(addr: String, _ completion: @escaping (UIImage) -> Void) {
+        let downloader = ImageDownloader.default
+        downloader.downloadImage(with: URL(string: addr)!) { result in
+            switch result {
+            case .success(let value):
+                completion(value.image)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    */
 }

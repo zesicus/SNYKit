@@ -33,19 +33,54 @@ extension UIImageView {
         self.image = UIGraphicsGetImageFromCurrentImageContext()!
     }
     
+    public func setCorner(radius:CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
     
-    // 设置及时网络图片（无缓存）
-    /*
-    public func setNetImgNoCache(urlString: String) {
+    //图片蒙版
+    public func maskPic(image: UIImage?, with maskImage: UIImage? = UIImage(named: "mask_image")) {
+        let maskLayer = CAShapeLayer()
+        maskLayer.fillColor = UIColor.black.cgColor
+        maskLayer.strokeColor = UIColor.clear.cgColor
+        maskLayer.frame = self.bounds
+        maskLayer.contentsCenter = CGRect(x: 0.5, y: 0.5, width: 0.1, height: 0.1)
+        maskLayer.contentsScale = SNY.screen.scale //自动拉伸效果不变形
+        maskLayer.contents = maskImage?.cgImage
+        
+        let contentLayer = CALayer()
+        contentLayer.mask = maskLayer
+        contentLayer.contents = image?.cgImage
+        contentLayer.frame = self.bounds
+        self.layer.addSublayer(contentLayer)
+        
+        self.layer.mask = maskLayer
+        self.layer.frame = self.bounds
+        self.image = image
+    }
+    
+    
+    // Kingfisher
+    /*设置及时网络图片（无缓存）
+    public func setNetImgNoCache(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img")) {
         let cache = KingfisherManager.shared.cache
         cache.clearDiskCache()//清除硬盘缓存
         cache.clearMemoryCache()//清理网络缓存
         cache.cleanExpiredDiskCache()//清理过期的，或者超过硬盘限制大小的
-        self.kf.setImage(with: URL(string: urlString), placeholder: #imageLiteral(resourceName: "default_rect"), options: nil, progressBlock: nil, completionHandler: nil)
+        self.kf.setImage(with: URL(string: urlString), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
+            if let error = result.error {
+                dprint(error)
+            }
+        }
     }
-    
-    public func setNetImg(urlString: String) {
-        self.kf.setImage(with: URL(string: urlString), placeholder: #imageLiteral(resourceName: "default_rect"), options: nil, progressBlock: nil, completionHandler: nil)
+     
+    //普通设置
+    public func setNetImg(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img")) {
+        self.kf.setImage(with: URL(string: urlString), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
+            if let error = result.error {
+                dprint(error)
+            }
+        }
     }
-    */
+ */
 }

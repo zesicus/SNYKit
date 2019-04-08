@@ -28,4 +28,11 @@ public extension Double {
     public static func random(min: Double, max: Double) -> Double {
         return Double.random * (max - min) + min
     }
+    
+    //解决精度丢失
+    public var decimalStr: String {
+        let doubleString = String(format: "%lf", self)
+        let preciseNum = NSDecimalNumber(string: doubleString)
+        return preciseNum.stringValue
+    }
 }
