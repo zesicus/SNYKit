@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIImage {
     //压缩图片
-    public func compressImage(toByte maxLength: Int) -> UIImage {
+    func compressImage(toByte maxLength: Int) -> UIImage {
         var compression: CGFloat = 1
         guard var data = self.jpegData(compressionQuality: compression),
             data.count > maxLength else { return self }

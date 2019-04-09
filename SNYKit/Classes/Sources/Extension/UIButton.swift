@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIButton {
     // 设置按钮图片在文字右
-    public func setTitleLeftImgRight(title: String, font: UIFont, fontColor: UIColor, image: UIImage, dist: CGFloat = 0.0, state: UIControl.State = .normal) {
+    func setTitleLeftImgRight(title: String, font: UIFont, fontColor: UIColor, image: UIImage, dist: CGFloat = 0.0, state: UIControl.State = .normal) {
         self.setTitle(title, for: state)
         self.setTitleColor(fontColor, for: state)
         self.titleLabel?.font = font
@@ -20,7 +20,7 @@ public extension UIButton {
     }
     
     // 设置按钮图片在文字左
-    public func setTitleRightImgLeft(title: String, font: UIFont, fontColor: UIColor, image: UIImage, dist: CGFloat = 0.0, state: UIControl.State = .normal) {
+    func setTitleRightImgLeft(title: String, font: UIFont, fontColor: UIColor, image: UIImage, dist: CGFloat = 0.0, state: UIControl.State = .normal) {
         self.setTitle(title, for: state)
         self.setTitleColor(fontColor, for: state)
         self.titleLabel?.font = font

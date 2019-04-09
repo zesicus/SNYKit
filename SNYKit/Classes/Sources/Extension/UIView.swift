@@ -12,7 +12,7 @@ public extension UIView {
     
     //适用于Alert动画展示效果
     
-    public func animateIn(parentVC: UIViewController, with backgroundView: UIView? = nil) {
+    func animateIn(parentVC: UIViewController, with backgroundView: UIView? = nil) {
         if backgroundView != nil {
             backgroundView!.backgroundColor = UIColor.black.withAlphaComponent(0)
             backgroundView!.frame = SNY.screen.frame
@@ -30,7 +30,7 @@ public extension UIView {
         }
     }
     
-    public func animateOut(with backgroundView: UIView? = nil) {
+    func animateOut(with backgroundView: UIView? = nil) {
         UIView.animate(withDuration: 0.3, animations: {
             self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             self.alpha = 0.2
@@ -48,7 +48,7 @@ public extension UIView {
     
     // View 向上滑动入场
     
-    public func slideIn(parentVC: UIViewController, bounds: CGRect, with backgroundView: UIView? = nil) {
+    func slideIn(parentVC: UIViewController, bounds: CGRect, with backgroundView: UIView? = nil) {
         if backgroundView != nil {
             backgroundView!.backgroundColor = UIColor.black.withAlphaComponent(0)
             backgroundView!.frame = SNY.screen.frame
@@ -66,7 +66,7 @@ public extension UIView {
         }
     }
     
-    public func slideOut(with backgroundView: UIView? = nil) {
+    func slideOut(with backgroundView: UIView? = nil) {
         let viewFrame = self.frame
         UIView.animate(withDuration: 0.3, animations: {
             self.frame = CGRect(x: viewFrame.minX, y: SNY.screen.height, width: viewFrame.size.width, height: viewFrame.size.height)

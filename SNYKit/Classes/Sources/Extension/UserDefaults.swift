@@ -58,13 +58,13 @@ import Foundation
 public extension UserDefaults {
     
     //存复杂对象
-    public func saveCustomObject(customObject object: NSCoding, key: String) {
+    func saveCustomObject(customObject object: NSCoding, key: String) {
         let encodedObject = NSKeyedArchiver.archivedData(withRootObject: object)
         self.set(encodedObject, forKey: key)
     }
     
     //取复杂对象
-    public func getCustomObject(forKey key: String) -> AnyObject? {
+    func getCustomObject(forKey key: String) -> AnyObject? {
         let decodedObject = self.object(forKey: key) as? NSData
         
         if let decoded = decodedObject {

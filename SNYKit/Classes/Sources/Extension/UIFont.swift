@@ -10,7 +10,7 @@ import Foundation
 public extension UIFont {
     
     // IconFont 字体
-    public static func iconFont(ofSize fontSize: CGFloat) -> UIFont {
+    static func iconFont(ofSize fontSize: CGFloat) -> UIFont {
         return UIFont(name: "iconfont", size: fontSize)!
     }
     

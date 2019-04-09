@@ -9,7 +9,7 @@
 public extension Date {
     
     //Date转String
-    public func getStringDate(format: String) -> String {
+    func getStringDate(format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = .current
         dateFormatter.dateFormat = format
@@ -18,7 +18,7 @@ public extension Date {
     }
     
     //判别时间
-    public func judgeTime() -> String {
+    func judgeTime() -> String {
         if Calendar.current.isDateInToday(self) {
             let components = self.delta(from: Date())
             if abs(components.hour!) >= 1 {
@@ -37,13 +37,13 @@ public extension Date {
         }
     }
     
-    public func delta(from: Date) -> DateComponents {
+    func delta(from: Date) -> DateComponents {
         let calendar = Calendar.current
         let unit = calendar.dateComponents([.day, .year, .month, .hour, .minute, .second], from: self as Date, to: from)
         return unit
     }
     
-    public func isThisYear() -> Bool {
+    func isThisYear() -> Bool {
         let calender = Calendar.current
         let nowYear  = calender.dateComponents([.year], from: Date())
         let selfYear = calender.dateComponents([.year], from: self as Date)

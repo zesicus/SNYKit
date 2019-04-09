@@ -12,23 +12,23 @@ public extension UIViewController {
     
     // MARK: - Left Bar button item
     
-    public func addLeftBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
+    func addLeftBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: action)
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: titleColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
         
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: titleColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
     }
     
-    public func addLeftBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
+    func addLeftBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: target, action: action)
     }
     
-    public func addIconFontLeftBarButtonItem(_ navigationItem: UINavigationItem, unicode: String, color: UIColor, target: Any?, action: Selector?, iconSize: CGFloat = 22) {
+    func addIconFontLeftBarButtonItem(_ navigationItem: UINavigationItem, unicode: String, color: UIColor, target: Any?, action: Selector?, iconSize: CGFloat = 22) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: unicode, style: .plain, target: target, action: action)
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([.font: UIFont.iconFont(ofSize: iconSize), .foregroundColor: color], for: .normal)
     }
     
-    public func addLeftBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
+    func addLeftBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
         var barBtnArr = [UIBarButtonItem]()
         let fixBar = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         fixBar.width = dist
@@ -45,7 +45,7 @@ public extension UIViewController {
         navigationItem.leftBarButtonItems = barBtnArr
     }
     
-    public func addIconFontLeftBarButtonItems(_ navigationItem: UINavigationItem, unicodes: [String], colors: [UIColor], dist: CGFloat, target: Any?, action: [Selector], iconSize: CGFloat = 22) {
+    func addIconFontLeftBarButtonItems(_ navigationItem: UINavigationItem, unicodes: [String], colors: [UIColor], dist: CGFloat, target: Any?, action: [Selector], iconSize: CGFloat = 22) {
         let fixBar = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         fixBar.width = dist
         var items = [UIBarButtonItem]()
@@ -62,23 +62,23 @@ public extension UIViewController {
     
     // MARK: - Right Bar button item
     
-    public func addRightBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
+    func addRightBarButtonItem(_ navigationItem: UINavigationItem, title: String, titleColor: UIColor, target: Any?, action: Selector?) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: action)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: titleColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0)], for: .normal)
         
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: titleColor, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0)], for: .highlighted)
     }
     
-    public func addRightBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
+    func addRightBarButtonItem(_ navigationItem: UINavigationItem, image: UIImage, target: Any?, action: Selector?) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image.withRenderingMode(.alwaysOriginal), style: .plain, target: target, action: action)
     }
     
-    public func addIconFontRightBarButtonItem(_ navigationItem: UINavigationItem, unicode: String, color: UIColor, target: Any?, action: Selector?, iconSize: CGFloat = 22) {
+    func addIconFontRightBarButtonItem(_ navigationItem: UINavigationItem, unicode: String, color: UIColor, target: Any?, action: Selector?, iconSize: CGFloat = 22) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: unicode, style: .plain, target: target, action: action)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([.font: UIFont.iconFont(ofSize: iconSize), .foregroundColor: color], for: .normal)
     }
     
-    public func addRightBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
+    func addRightBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
         var barBtnArr = [UIBarButtonItem]()
         let fixBar = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         fixBar.width = dist
@@ -95,7 +95,7 @@ public extension UIViewController {
         navigationItem.rightBarButtonItems = barBtnArr
     }
     
-    public func addIconFontRightBarButtonItems(_ navigationItem: UINavigationItem, unicodes: [String], colors: [UIColor], dist: CGFloat, target: Any?, action: [Selector], iconSize: CGFloat = 22) {
+    func addIconFontRightBarButtonItems(_ navigationItem: UINavigationItem, unicodes: [String], colors: [UIColor], dist: CGFloat, target: Any?, action: [Selector], iconSize: CGFloat = 22) {
         let fixBar = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         fixBar.width = dist
         var items = [UIBarButtonItem]()
@@ -111,7 +111,7 @@ public extension UIViewController {
     }
     
     //单按钮提示
-    public func showBtnAlert(msg: String) {
+    func showBtnAlert(msg: String) {
         let alert = UIAlertController(title: "提示", message: msg, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "确定", style: .default, handler: nil)
         alert.addAction(okAction)
@@ -119,7 +119,7 @@ public extension UIViewController {
     }
     
     //禁止自动修改Scroll布局
-    public func disableAdjustsScrollViewInsets(_ scrollView: UIScrollView) {
+    func disableAdjustsScrollViewInsets(_ scrollView: UIScrollView) {
         if #available(iOS 11.0, *) {
             scrollView.contentInsetAdjustmentBehavior = .never
         } else {

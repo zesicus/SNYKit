@@ -35,11 +35,11 @@ public extension String {
  */
     
     //获取字符串宽度
-    public func getWidth(size: CGFloat) -> CGFloat {
+    func getWidth(size: CGFloat) -> CGFloat {
         return self.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: size)]).width
     }
     
-    public var html2AttributedString: NSAttributedString? {
+    var html2AttributedString: NSAttributedString? {
         do {
             return try NSAttributedString(data: Data(utf8), options: [.documentType: NSAttributedString.DocumentType.html,
                                                                       .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
@@ -49,12 +49,12 @@ public extension String {
         }
     }
     
-    public var html2String: String {
+    var html2String: String {
         return html2AttributedString?.string ?? ""
     }
     
     //获得带有行间距的字符串
-    public func getLineSpacing(lineSpacing: CGFloat = 10.0, charSpacing: CGFloat = 1) -> NSMutableAttributedString {
+    func getLineSpacing(lineSpacing: CGFloat = 10.0, charSpacing: CGFloat = 1) -> NSMutableAttributedString {
         let paragraphStye = NSMutableParagraphStyle()
         //调整行间距
         paragraphStye.lineSpacing = lineSpacing
@@ -76,7 +76,7 @@ public extension String {
     }
     
     //备份标记不同步iCloud
-    public func excludeFromBackup() {
+    func excludeFromBackup() {
         var fileToExclude = URL.init(fileURLWithPath: self)
         do {
             var resourceValues = URLResourceValues()
@@ -87,15 +87,15 @@ public extension String {
         }
     }
     
-    public var urlEscaped: String {
+    var urlEscaped: String {
         return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
     
-    public var utf8Encoded: Data {
+    var utf8Encoded: Data {
         return self.data(using: .utf8)!
     }
     
-    public func substring(fromIndex: Int) -> String {
+    func substring(fromIndex: Int) -> String {
         return self[min(fromIndex, self.count) ..< self.count]
     }
     
@@ -104,7 +104,7 @@ public extension String {
     }
     
     //截取字符串到Index
-    public func substring(toIndex: Int) -> String {
+    func substring(toIndex: Int) -> String {
         return self[0 ..< max(0, toIndex)]
     }
     
@@ -116,7 +116,7 @@ public extension String {
     }
     
     //转化为字符数组
-    public func toCharArray() -> [String] {
+    func toCharArray() -> [String] {
         var chars = [String]()
         for char in self {
             chars.append(String(char))
@@ -125,7 +125,7 @@ public extension String {
     }
     
     //播放声音
-    public func playSound() {
+    func playSound() {
         let filePath = Bundle.main.path(forResource: self, ofType: nil)
         if filePath != nil {
             let fileURL = URL(string: filePath!)
@@ -136,7 +136,7 @@ public extension String {
     }
     
     //隐藏名字(用*代替)
-    public var hideName: String {
+    var hideName: String {
         var formatedName = ""
         var charArr = [String]()
         for (index, char) in self.toCharArray().enumerated() {
@@ -153,7 +153,7 @@ public extension String {
     }
     
     //隐藏手机号码
-    public var hidePhone: String {
+    var hidePhone: String {
         var formatedPhone = ""
         var charArr = [String]()
         for (index, char) in self.toCharArray().enumerated() {
@@ -173,7 +173,7 @@ public extension String {
     }
     
     //隐藏身份证号
-    public var hideIDCardNo: String {
+    var hideIDCardNo: String {
         var formatedIDCardNo = ""
         var charArr = [String]()
         for (index, char) in self.toCharArray().enumerated() {
@@ -194,7 +194,7 @@ public extension String {
     
     //倒计时
     @available (iOS 10.0, *)
-    public func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
+    func countDown(dateFormat: String, _ completion: @escaping (String, String, String, String) -> Void) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
         //结束时间

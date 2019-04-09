@@ -11,13 +11,13 @@ import Foundation
 public extension Int {
     
     // 秒转日期
-    public func getDate() -> Date {
+    func getDate() -> Date {
         let flashDate = Date(timeIntervalSince1970: (TimeInterval(self)))
         return flashDate
     }
     
     // 转字符串格式日期
-    public func getStringDate(format: String) -> String {
+    func getStringDate(format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = .current
         dateFormatter.dateFormat = format
@@ -27,7 +27,7 @@ public extension Int {
     }
     
     // 薪资转化为K
-    public func getSalary() -> String {
+    func getSalary() -> String {
         var salary = ""
         if self >= 100 {
             if (Double(self) / 1000.0) > Double(self / 1000) {
@@ -42,7 +42,7 @@ public extension Int {
     }
     
     /// Returns a random Int point number between 0 and Int.max.
-    public static var random: Int {
+    static var random: Int {
         return Int.random(n: Int.max)
     }
     
@@ -50,7 +50,7 @@ public extension Int {
     ///
     /// - Parameter n:  Interval max
     /// - Returns:      Returns a random Int point number between 0 and n max
-    public static func random(n: Int) -> Int {
+    static func random(n: Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
     }
     
@@ -60,7 +60,7 @@ public extension Int {
     ///   - min:    Interval minimun
     ///   - max:    Interval max
     /// - Returns:  Returns a random Int point number between 0 and n max
-    public static func random(min: Int, max: Int) -> Int {
+    static func random(min: Int, max: Int) -> Int {
         return Int.random(n: max - min + 1) + min
         
     }
