@@ -10,12 +10,16 @@ public extension CGFloat {
     
     /// Randomly returns either 1.0 or -1.0.
     static var randomSign: CGFloat {
-        return (arc4random_uniform(2) == 0) ? 1.0 : -1.0
+        get {
+            return (arc4random_uniform(2) == 0) ? 1.0 : -1.0
+        }
     }
     
     /// Returns a random floating point number between 0.0 and 1.0, inclusive.
     static var random: CGFloat {
-        return CGFloat(Float(arc4random()) / Float(UInt32.max))
+        get {
+            return CGFloat(Float(arc4random()) / Float(UInt32.max))
+        }
     }
     
     /// Random CGFloat between 0 and n-1.

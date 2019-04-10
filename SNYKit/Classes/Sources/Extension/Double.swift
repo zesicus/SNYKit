@@ -18,7 +18,9 @@ public extension Double {
     
     /// Returns a random floating point number between 0.0 and 1.0, inclusive.
     static var random: Double {
-        return Double(arc4random()) / 0xFFFFFFFF
+        get {
+            return Double(arc4random()) / Double(UInt32.max)
+        }
     }
     
     /// Random double between 0 and n-1.
@@ -31,8 +33,10 @@ public extension Double {
     
     //解决精度丢失
     var decimalStr: String {
-        let doubleString = String(format: "%lf", self)
-        let preciseNum = NSDecimalNumber(string: doubleString)
-        return preciseNum.stringValue
+        get {
+            let doubleString = String(format: "%lf", self)
+            let preciseNum = NSDecimalNumber(string: doubleString)
+            return preciseNum.stringValue
+        }
     }
 }

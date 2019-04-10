@@ -1,13 +1,16 @@
 PODS:
+  - Kingfisher (5.3.1)
   - ReachabilitySwift (4.3.1)
-  - SNYKit (2.3):
-    - ReachabilitySwift
+  - SNYKit (2.4):
+    - Kingfisher (= 5.3.1)
+    - ReachabilitySwift (= 4.3.1)
 
 DEPENDENCIES:
   - SNYKit (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - ReachabilitySwift
 
 EXTERNAL SOURCES:
@@ -15,9 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  SNYKit: e543f9a5703104e7bf4d4aca2b2c89eb8ced48f0
+  SNYKit: c7c2bde49ddf850dc59782427001d7a793fe55ce
 
 PODFILE CHECKSUM: 8a0df365fb3bb7f29ab54557c657dbc3bdfb4ed9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

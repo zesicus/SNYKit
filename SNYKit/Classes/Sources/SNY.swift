@@ -11,6 +11,7 @@ import CoreTelephony
 import Reachability
 import Photos
 import AVFoundation
+import Kingfisher
 
 // 无Release打印
 public func dprint(_ item: Any) {
@@ -44,10 +45,12 @@ open class SNY {
     public static let uuid = UIDevice.current.identifierForVendor?.uuidString
     
     // MARK: - Documents目录位置
-    public static var documentsPath: URL = {
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return urls[urls.count - 1]
-    }()
+    public static var documentsPath: URL {
+        get {
+            let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            return urls[urls.count - 1]
+        }
+    }
     
     // 启动动画
     open class func launchAnimation() {
@@ -128,54 +131,57 @@ open class SNY {
     
     //网络类型 (或用于权限判断)
     public static var networkType: Reachability.Connection {
-        let reachability = Reachability()!
-        return reachability.connection
+        get {
+            let reachability = Reachability()!
+            return reachability.connection
+        }
     }
     
     //相册权限
     public static var photoAlbumPermission: PHAuthorizationStatus {
-        let status = PHPhotoLibrary.authorizationStatus()
-        return status
+        get {
+            let status = PHPhotoLibrary.authorizationStatus()
+            return status
+        }
     }
     
     //相机权限
     public static var cameraPermission: AVAuthorizationStatus {
-        let status = AVCaptureDevice.authorizationStatus(for: .video)
-        return status
+        get {
+            let status = AVCaptureDevice.authorizationStatus(for: .video)
+            return status
+        }
     }
     
     //麦克风权限
     public static var microphonePermission: AVAuthorizationStatus {
-        let status = AVCaptureDevice.authorizationStatus(for: .audio)
-        return status
+        get {
+            let status = AVCaptureDevice.authorizationStatus(for: .audio)
+            return status
+        }
     }
     
     //推送权限
     public static var pushPermission: Bool {
-        if UIApplication.shared.currentUserNotificationSettings == nil {
-            return false
-        } else {
-            if Int(UIApplication.shared.currentUserNotificationSettings!.types.rawValue) == 0 {
-                return false
-            } else {
-                return true
-            }
+        get {
+            let isRegisteredForRemoteNotifications = UIApplication.shared.isRegisteredForRemoteNotifications
+            return isRegisteredForRemoteNotifications
         }
     }
     
     //判断GPS服务是否可用
     public static var locationPermission: Bool {
-        if CLLocationManager.locationServicesEnabled() && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
-            return true
-        } else {
-            return false
+        get {
+            if CLLocationManager.locationServicesEnabled() && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
+                return true
+            } else {
+                return false
+            }
         }
     }
     
-    
-    // Kingfisher 功能
-    /* download pic
-    func downloadImage(addr: String, _ completion: @escaping (UIImage) -> Void) {
+    // Kingfisher download pic
+    public static func downloadImage(addr: String, _ completion: @escaping (UIImage) -> Void) {
         let downloader = ImageDownloader.default
         downloader.downloadImage(with: URL(string: addr)!) { result in
             switch result {
@@ -186,5 +192,4 @@ open class SNY {
             }
         }
     }
-    */
 }

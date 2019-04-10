@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69F67DCF8505B399670A9C64CA473D48"
+               BlueprintIdentifier = "C9EA8CD732F843692E55E4EC67C6BFA9"
                BuildableName = "Pods_SNYKit_Example.framework"
                BlueprintName = "Pods-SNYKit_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69F67DCF8505B399670A9C64CA473D48"
+            BlueprintIdentifier = "C9EA8CD732F843692E55E4EC67C6BFA9"
             BuildableName = "Pods_SNYKit_Example.framework"
             BlueprintName = "Pods-SNYKit_Example"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69F67DCF8505B399670A9C64CA473D48"
+            BlueprintIdentifier = "C9EA8CD732F843692E55E4EC67C6BFA9"
             BuildableName = "Pods_SNYKit_Example.framework"
             BlueprintName = "Pods-SNYKit_Example"
             ReferencedContainer = "container:Pods.xcodeproj">

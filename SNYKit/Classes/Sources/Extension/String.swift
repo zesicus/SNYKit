@@ -50,7 +50,9 @@ public extension String {
     }
     
     var html2String: String {
-        return html2AttributedString?.string ?? ""
+        get {
+            return html2AttributedString?.string ?? ""
+        }
     }
     
     //获得带有行间距的字符串
@@ -88,11 +90,15 @@ public extension String {
     }
     
     var urlEscaped: String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        get {
+            return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        }
     }
     
     var utf8Encoded: Data {
-        return self.data(using: .utf8)!
+        get {
+            return self.data(using: .utf8)!
+        }
     }
     
     func substring(fromIndex: Int) -> String {
@@ -137,59 +143,65 @@ public extension String {
     
     //隐藏名字(用*代替)
     var hideName: String {
-        var formatedName = ""
-        var charArr = [String]()
-        for (index, char) in self.toCharArray().enumerated() {
-            if index == 0 {
-                charArr.append(char)
-            } else {
-                charArr.append("*")
+        get {
+            var formatedName = ""
+            var charArr = [String]()
+            for (index, char) in self.toCharArray().enumerated() {
+                if index == 0 {
+                    charArr.append(char)
+                } else {
+                    charArr.append("*")
+                }
             }
+            for char in charArr {
+                formatedName += char
+            }
+            return formatedName
         }
-        for char in charArr {
-            formatedName += char
-        }
-        return formatedName
     }
     
     //隐藏手机号码
     var hidePhone: String {
-        var formatedPhone = ""
-        var charArr = [String]()
-        for (index, char) in self.toCharArray().enumerated() {
-            switch index {
-            case 3, 4, 5, 6:
-                charArr.append("*")
-                break
-            default:
-                charArr.append(char)
-                break
+        get {
+            var formatedPhone = ""
+            var charArr = [String]()
+            for (index, char) in self.toCharArray().enumerated() {
+                switch index {
+                case 3, 4, 5, 6:
+                    charArr.append("*")
+                    break
+                default:
+                    charArr.append(char)
+                    break
+                }
             }
+            for char in charArr {
+                formatedPhone += char
+            }
+            return formatedPhone
         }
-        for char in charArr {
-            formatedPhone += char
-        }
-        return formatedPhone
     }
     
     //隐藏身份证号
     var hideIDCardNo: String {
-        var formatedIDCardNo = ""
-        var charArr = [String]()
-        for (index, char) in self.toCharArray().enumerated() {
-            switch index {
-            case 4, 5, 6, 7, 8, 9, 10, 11, 12, 13:
-                charArr.append("*")
-                break
-            default:
-                charArr.append(char)
-                break
+        get {
+            var formatedIDCardNo = ""
+            var charArr = [String]()
+            for (index, char) in self.toCharArray().enumerated() {
+                switch index {
+                case 4, 5, 6, 7, 8, 9, 10, 11, 12, 13:
+                    charArr.append("*")
+                    break
+                default:
+                    charArr.append(char)
+                    break
+                }
             }
+            for char in charArr {
+                formatedIDCardNo += char
+            }
+            return formatedIDCardNo
         }
-        for char in charArr {
-            formatedIDCardNo += char
-        }
-        return formatedIDCardNo
     }
     
     //倒计时

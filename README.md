@@ -11,6 +11,15 @@
 
 主要使用 Swift，还有一些用到的基于 OC 的方法（还有许多搜集到的工具代码，经自己测试和修改确保可用且应用于项目，并在此对借鉴代码的作者们说声谢谢！🙏）。
 
+已添加的依赖库：
+
+```
+v2.1 以上
+'ReachabilitySwift', '4.3.1'
+v2.4 以上
+'Kingfisher', '5.3.1'
+```
+
 ## Installation
 
 支持通过 [CocoaPods](https://cocoapods.org) 的方式去集成：
@@ -619,14 +628,22 @@ imageView.fillImaginaryLine()
 let fixedImg = originImg.fixOrientation()
 ```
 
-* Kingfisher 需要关闭注释
+* 设置网络图片
 
 ```Swift
-//设置无缓存网络图片
-imageView.setNetImgNoCache(urlString: "http://baidu.com/abc.jpg")
+/// 有缓存式设置网络图片
+///
+/// - Parameters:
+///   - urlString: 网络图片地址
+///   - placeholder: 占位图
+public func setNetImg(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img"))
 
-//设置网络图片
-imageView.setNetImg(urlString: "http://baidu.com/abc.jpg")
+/// 无缓存式设置网络图片
+///
+/// - Parameters:
+///   - urlString: 网络图片地址
+///   - placeholder: 占位图
+public func setNetImgNoCache(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img"))
 ```
  
 </details> 

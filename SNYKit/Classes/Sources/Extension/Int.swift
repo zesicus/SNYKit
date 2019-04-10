@@ -43,7 +43,9 @@ public extension Int {
     
     /// Returns a random Int point number between 0 and Int.max.
     static var random: Int {
-        return Int.random(n: Int.max)
+        get {
+            return Int.random(n: Int.max)
+        }
     }
     
     /// Random integer between 0 and n-1.

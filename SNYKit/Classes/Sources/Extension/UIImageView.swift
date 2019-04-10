@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UIImageView {
     
@@ -61,26 +62,39 @@ extension UIImageView {
     
     
     // Kingfisher
-    /*设置及时网络图片（无缓存）
+    //设置及时网络图片（无缓存）
+    
+    /// 无缓存式设置网络图片
+    ///
+    /// - Parameters:
+    ///   - urlString: 网络图片地址
+    ///   - placeholder: 占位图
     public func setNetImgNoCache(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img")) {
         let cache = KingfisherManager.shared.cache
         cache.clearDiskCache()//清除硬盘缓存
         cache.clearMemoryCache()//清理网络缓存
         cache.cleanExpiredDiskCache()//清理过期的，或者超过硬盘限制大小的
         self.kf.setImage(with: URL(string: urlString), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
-            if let error = result.error {
+            do {
+                let _ = try result.get()
+            } catch let error {
                 dprint(error)
             }
         }
     }
-     
-    //普通设置
+    
+    /// 有缓存式设置网络图片
+    ///
+    /// - Parameters:
+    ///   - urlString: 网络图片地址
+    ///   - placeholder: 占位图
     public func setNetImg(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img")) {
         self.kf.setImage(with: URL(string: urlString), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
-            if let error = result.error {
+            do {
+                let _ = try result.get()
+            } catch let error {
                 dprint(error)
             }
         }
     }
- */
 }
