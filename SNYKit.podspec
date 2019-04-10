@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNYKit'
-  s.version          = '2.3.1'
+  s.version          = '2.4'
   s.summary          = 'Sunny的便利工具集.'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/zesicus/SNYKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zesicus' => 'zesicus@users.noreply.github.com' }
+  s.author           = { 'zesicus' => 'zesicus@163.com' }
   s.source           = { :git => 'https://github.com/zesicus/SNYKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -38,6 +38,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'Moya', '10.0.0'
-  s.dependency 'ReachabilitySwift'
+  s.dependency 'ReachabilitySwift', '4.3.1'
 end

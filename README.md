@@ -9,23 +9,20 @@
 
 日常开发逐渐积累下来的一个 iOS 便利工具集。
 
-主要使用 Swift，还有一些用到的基于 OC 的方法（很多从大环境搜集到的方法，经自己测试和修改确保可用且应用于项目，并在此对借鉴代码的作者们说声谢谢！🙏）。
+主要使用 Swift，还有一些用到的基于 OC 的方法（还有许多搜集到的工具代码，经自己测试和修改确保可用且应用于项目，并在此对借鉴代码的作者们说声谢谢！🙏）。
 
 ## Installation
 
-可以通过 [CocoaPods](https://cocoapods.org) 的方式去安装：
+支持通过 [CocoaPods](https://cocoapods.org) 的方式去集成：
 
 ```ruby
-# Swift 4.2 版本
 pod 'SNYKit'
-
-# Swift 4.1 版本
-pod 'SNYKit', '1.0.2'
 ```
 
 ## How to Use
 
-SNYKit有一个方法总集 --> SNY，以及对于UIKit基础类的扩展。
+SNYKit有两个单拎出来的工具类 `SNY` (Swift) 和 `SNYOC` (Objective-C)， 的以及一些类的扩展 (Swift)。  
+
 下面是详细介绍⤵：
 
 ### *SNY* 🍋
@@ -279,6 +276,16 @@ SNY.getCarrier()
 ### *SNYOC* 🌶
 
 <details>
+ <summary> UIView 深复制 </summary>
+
+```Swift
+let theView = UIView()
+let cpView = SNYOC.copy(theView)
+```
+ 
+</details> 
+
+<details>
  <summary> 多彩字 </summary>
  
  * 改变字符串中个别字符的颜色
@@ -398,15 +405,33 @@ SNYOC.checkTel("12345")
 </details> 
 
 
+<details>
+ <summary> 颜色生成图片 </summary>
+ 
+ * 颜色生成 UIImage (Extension UIColor 同样有实现)
+
+```Swift
+let redImg = SNYOC.createImage(with: .red)
+```
+ 
+</details> 
+
+
 ### *Extension扩展* 🥝
 
 <details>
  <summary>Int、CGFloat、Double</summary>
-
-* 毫秒转Date型日期
+ 
+* 解决精度丢失 (Double -> String)
 
 ```Swift
-12345000.getDate()
+let fixedNumStr = num.decimalStr
+```
+
+* 秒转Date型日期 (毫秒自行 x 1000)
+
+```Swift
+let date = timeStamp.getDate()
 ```
 
 * 毫秒转字符型日期
@@ -447,6 +472,13 @@ Date().judgeTime()
 
 <details>
  <summary>String</summary>
+ 
+* 将身份证号除前三位和后四位，中间用*号表示
+
+```Swift
+let idNum = "311119199303252222"
+let hideIdNum = idNum.hideIDCardNo
+```
  
 * 随机MD5，这部分给注释掉了，使用则在桥接文件中`#import <CommonCrypto/CommonCrypto.h>`
 
@@ -522,7 +554,13 @@ thumUpBtn.setTitleLeftImgRight(title: "点赞", font: UIFont.systemFont(ofSize: 
 <details>
  <summary>UIColor</summary>
  
- * 不用除255的便利方法
+* 随机颜色
+
+```Swift
+UIColor.randomColor()
+``` 
+ 
+* 不用除255的便利方法
 
 ```Swift
 UIColor(r: 12, g: 22, b: 125)
@@ -558,10 +596,27 @@ image.compressImage(toByte: 100 * 1024)
 <details>
  <summary>UIImageView</summary>
  
+* 设置图片形状模版 (如 聊天气泡样式图片)
+
+```Swift
+imgView.maskPic(image: img, with: bubbleImg)
+```
+ 
+* 设置圆角（便利方法）
+
+```Swift
+imgView.setCorner(radius: 4.0)
+```
+ 
 * 填充虚线，注意view的高度
 
 ```Swift
 imageView.fillImaginaryLine()
+```
+* 修复垂直拍摄照片旋转90度问题
+
+```Swift
+let fixedImg = originImg.fixOrientation()
 ```
 
 * Kingfisher 需要关闭注释
@@ -580,6 +635,15 @@ imageView.setNetImg(urlString: "http://baidu.com/abc.jpg")
 <details>
  <summary>UIView</summary>
  
+ * 适用于从下往上滑动入场效果，如需要阴影遮罩，传入遮罩UIView实例
+
+ ```Swift
+ //滑入
+ optionsView.slideIn(parentVC: self, bounds: CGRect(x: 0, y: 0, width: SNY.screen.width, height: 200), with: bgView)
+ //滑出
+ optionsView.slideOut(with: bgView)
+ ```
+ 
  * 适用于提示框弹出的动画展示效果, with后面跟的是阴影遮罩，手动传入
 
 ```Swift
@@ -595,6 +659,12 @@ exchangeView.animateOut(with: backgroundView)
 
 <details>
  <summary>UIViewController </summary>
+ 
+* 跳过返回主控制器
+
+```Swift
+func backToRootVC(popAnimation: Bool, dismissAnimation: Bool)
+```
 
 * 导航栏左右按钮
 

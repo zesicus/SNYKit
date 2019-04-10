@@ -128,15 +128,15 @@ public extension UIViewController {
     }
     
     //返回到主控制器
-    func backToRootVC() {
+    func backToRootVC(popAnimation: Bool, dismissAnimation: Bool) {
         var presentingVC = self.presentingViewController
         while ((presentingVC?.presentingViewController) != nil) {
             presentingVC = presentingVC?.presentingViewController
         }
         if presentingVC != nil {
-            presentingVC?.dismiss(animated: true, completion: nil)
+            presentingVC?.dismiss(animated: dismissAnimation, completion: nil)
             let nav = presentingVC as? UINavigationController
-            nav?.popToRootViewController(animated: true)
+            nav?.popToRootViewController(animated: popAnimation)
         }
     }
     
