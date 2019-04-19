@@ -137,6 +137,8 @@ public extension UIViewController {
             presentingVC?.dismiss(animated: dismissAnimation, completion: nil)
             let nav = presentingVC as? UINavigationController
             nav?.popToRootViewController(animated: popAnimation)
+        } else {
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     
