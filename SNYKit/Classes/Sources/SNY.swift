@@ -44,11 +44,16 @@ open class SNY {
     // MARK: - UUID
     public static let uuid = UIDevice.current.identifierForVendor?.uuidString
     
-    // MARK: - Documents目录位置
+    // MARK: - 目录位置
     public static var documentsPath: URL {
         get {
-            let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            return urls[urls.count - 1]
+            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        }
+    }
+    
+    public static var cachesPath: URL {
+        get {
+            return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
         }
     }
     

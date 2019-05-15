@@ -110,4 +110,27 @@ public extension UIImage {
         return img
     }
     
+    //改变图片颜色(经测试可能会产生很细的图片边框)
+    
+    func withColor(_ color: UIColor) -> UIImage {
+        UIGraphicsBeginImageContext(self.size)
+        color.setFill()
+        let bounds = CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        UIRectFill(bounds)
+        self.draw(in: bounds, blendMode: CGBlendMode.destinationIn, alpha: 1.0)
+        let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return tintedImage!
+    }
+    
+    //改变图片尺寸
+    
+    func withSize(_ size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContext(size)
+        self.draw(in: CGRect(origin: .zero, size: size))
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img ?? self
+    }
+    
 }
