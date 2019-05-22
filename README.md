@@ -37,7 +37,16 @@ SNYKit有两个单拎出来的工具类 `SNY` (Swift) 和 `SNYOC` (Objective-C)�
 ### *SNY* 🍋
 
 <details>
- <summary>Debug环境打印函数</summary>
+ <summary>日志记录工具</summary>
+ 
+ ```Swift
+SNYOC.recordLog("--- App启动 ---")
+ ```
+ 
+</details> 
+
+<details>
+ <summary>Debug环境print</summary>
  
  ```Swift
  dprint("hello")

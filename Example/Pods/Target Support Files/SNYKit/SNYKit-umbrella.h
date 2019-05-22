@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "LogManager.h"
 #import "SNYOC.h"
 
 FOUNDATION_EXPORT double SNYKitVersionNumber;

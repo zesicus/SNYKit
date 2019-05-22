@@ -1,7 +1,7 @@
 PODS:
   - Kingfisher (5.3.1)
   - ReachabilitySwift (4.3.1)
-  - SNYKit (2.4):
+  - SNYKit (2.4.2):
     - Kingfisher (= 5.3.1)
     - ReachabilitySwift (= 4.3.1)
 
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  SNYKit: c7c2bde49ddf850dc59782427001d7a793fe55ce
+  SNYKit: fcbb316f986dc954b85f690d0ea127691325c0eb
 
 PODFILE CHECKSUM: 8a0df365fb3bb7f29ab54557c657dbc3bdfb4ed9
 
