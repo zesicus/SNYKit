@@ -18,6 +18,11 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
 
 @implementation SNYOC
 
+// 记录日志
++ (void)recordLog:(NSString *)logStr {
+    [[LogManager sharedInstance] recordLog:logStr];
+}
+
 // View深复制
 + (UIView *)copyView:(UIView *)view {
     NSData * tempArchive = [NSKeyedArchiver archivedDataWithRootObject:view];

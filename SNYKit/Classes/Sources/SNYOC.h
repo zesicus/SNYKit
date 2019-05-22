@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "LogManager.h"
 
 //16进制的颜色
 #define COLOR_WITH_HEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 blue:((float)(hexValue & 0xFF)) / 255.0 alpha:1.0f]
@@ -25,6 +26,9 @@ typedef enum{
 
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
+
+//记录日志
++ (void)recordLog:(NSString *)logStr;
 
 //把你想变颜色的字列出来，当然你只能传单个字符的数组进去
 + (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color;

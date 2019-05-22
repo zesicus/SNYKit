@@ -67,6 +67,8 @@
 		9C55A964C279D773921C8E383B8F3119 /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C594BC59F3FB2FAFD3A984C4B06D82F /* CallbackQueue.swift */; };
 		A0CAADC0CD9F0313FE0DE554E1C4F506 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD83281020B1DB4830654FE97F21EA3 /* Indicator.swift */; };
 		A2D0AA02D594C2F4B22EC47E678072F9 /* Pods-SNYKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A198D30DEE2DABF657BF2DB4ECDFD3 /* Pods-SNYKit_Example-dummy.m */; };
+		A3670CB32294F91200D46FFA /* LogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A3670CB12294F91200D46FFA /* LogManager.h */; };
+		A3670CB42294F91200D46FFA /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3670CB22294F91200D46FFA /* LogManager.m */; };
 		A5BF2E915401AF40F2AF9CC434E5B120 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F6536B60EFD48DAC6E280903787BBC /* Accelerate.framework */; };
 		A75171FF0F1A36C84313DBB7518C820C /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C645B62C1A13B67C611ABEB5C8A5169 /* Placeholder.swift */; };
 		A9FA40E2FAC408D5B3729355800CC3E8 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93F70998C6BDA5709C36ADB06E9992 /* KingfisherOptionsInfo.swift */; };
@@ -219,6 +221,8 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1548320337A5259CF95092C496FC8EE /* SNYKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SNYKit.xcconfig; sourceTree = "<group>"; };
 		A271914D710AF96EBC62042644A936F4 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
+		A3670CB12294F91200D46FFA /* LogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		A3670CB22294F91200D46FFA /* LogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		A8AE2E447F50AF7BCAEF7A9AF9C3398A /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
 		AD61FCAF266EFB3220B2212C1FACE378 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		ADB20F188E8796A53EEEB19108477FB2 /* AlamofireManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
@@ -416,6 +420,8 @@
 				7AA9D2A62E411F17F7AC16188854E4BA /* AppStates.swift */,
 				69ABEFC5EAF830E89A5518B9F5F9BB2B /* GCD.swift */,
 				7F67AE1C97DEE39F157450B65CCD0BEE /* Screen.swift */,
+				A3670CB12294F91200D46FFA /* LogManager.h */,
+				A3670CB22294F91200D46FFA /* LogManager.m */,
 			);
 			name = Providers;
 			path = SNYKit/Classes/Sources/Providers;
@@ -597,6 +603,7 @@
 			files = (
 				B1CE48E721C5867F73414D1EA0A521F4 /* Kingfisher-umbrella.h in Headers */,
 				96A7C042EDAA56ABCE08A35D65D36E12 /* Kingfisher.h in Headers */,
+				A3670CB32294F91200D46FFA /* LogManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +854,7 @@
 				9017047E3D09136388728432BAAE850A /* KingfisherManager.swift in Sources */,
 				A9FA40E2FAC408D5B3729355800CC3E8 /* KingfisherOptionsInfo.swift in Sources */,
 				614DF7C17451FB68CF3B5E99A68AEE78 /* MemoryStorage.swift in Sources */,
+				A3670CB42294F91200D46FFA /* LogManager.m in Sources */,
 				A75171FF0F1A36C84313DBB7518C820C /* Placeholder.swift in Sources */,
 				47DDF3F4654CD1D7618A1A8244FD361A /* RedirectHandler.swift in Sources */,
 				44AD024FDF434B3A54279C2BEB7B12F1 /* RequestModifier.swift in Sources */,
