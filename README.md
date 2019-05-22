@@ -156,10 +156,13 @@ SNY.gcd.cancleTimer(WithTimerName: "hello")
 </details> 
 
 <details>
- <summary>Documents文件夹路径</summary>
+ <summary>沙盒路径</summary>
  
  ```Swift
+ //Documents路径
 SNY.documentsPath
+//Cache路径
+SNY.cachesPath
  ```
  
 </details> 
@@ -278,9 +281,18 @@ SNY.getCarrier()
  }
  ```
  
+</details> 
+
+
+<details>
+ <summary>Kingfisher下载图片</summary>
+
+```Swift
+func downloadImage(addr: String, _ completion: @escaping (UIImage) -> Void)
+```
  
 </details> 
- 
+
 
 ### *SNYOC* 🌶
 
@@ -644,6 +656,18 @@ public func setNetImg(urlString: String, placeholder: UIImage? = UIImage(named: 
 ///   - urlString: 网络图片地址
 ///   - placeholder: 占位图
 public func setNetImgNoCache(urlString: String, placeholder: UIImage? = UIImage(named: "sny_default_img"))
+```
+
+* 改变图片颜色（经测试可能会产生很细的图片边框）
+
+```Swift
+    func withColor(_ color: UIColor) -> UIImage
+```
+
+* 改变图片尺寸
+
+```Swift
+    func withSize(_ size: CGSize) -> UIImage
 ```
  
 </details> 
