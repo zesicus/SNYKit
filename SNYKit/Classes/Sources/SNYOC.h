@@ -85,4 +85,7 @@ typedef enum{
 // View深复制
 + (UIView *)copyView:(UIView *)view;
 
+// 日期换算 - 昨天、今天、明天、后天
++ (NSString *)getDateToStr:(NSDate *)date withFormat:(NSString *)format;
+
 @end

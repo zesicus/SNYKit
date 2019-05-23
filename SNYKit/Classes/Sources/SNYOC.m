@@ -385,5 +385,51 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
     }
     return YES;
 }
+    
++ (int)getIntegerFromDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyyMMdd"];
+    NSString *todayStr = [formatter stringFromDate:date];
+    int presentDay = [todayStr intValue];
+    return presentDay;
+}
+
++ (NSString *)getDateToStr:(NSDate *)date withFormat:(NSString *)format {
+    NSString *flagString = nil;
+    // 当前日期
+    int currentDate = [self getIntegerFromDate:[NSDate date]];
+    // 目标日期
+    int tar = [self getIntegerFromDate:date];
+    // 时间差
+    int diff = tar - currentDate;
+    
+    if ( diff < 3 && diff >= 0) {
+        switch (diff) {
+            case 0:
+                flagString = @"今天";
+                break;
+            case 1:
+                flagString = @"明天";
+                break;
+            case 2:
+                flagString = @"后天";
+                break;
+            default:
+                break;
+        }
+    }
+    else if (diff == -1) {
+        flagString = @"昨天";
+    } else {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]];
+        [formatter setDateFormat:format];
+        flagString = [formatter stringFromDate:date];
+    }
+    
+    return flagString ;
+}
+
+
 
 @end
