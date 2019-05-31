@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "10.0"
   },
-  "swift_version": "5.0",
+  "swift_versions": "5.0",
   "source_files": "SNYKit/Classes/**/*",
   "frameworks": "UIKit",
   "dependencies": {
@@ -28,5 +28,6 @@
     "Kingfisher": [
       "5.3.1"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

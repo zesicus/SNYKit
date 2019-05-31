@@ -1,7 +1,11 @@
 use_frameworks!
+platform :ios, '10.0'
 
 target 'SNYKit_Example' do
   pod 'SNYKit', :path => '../'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'SnapKit'
 
   target 'SNYKit_Tests' do
     inherit! :search_paths
