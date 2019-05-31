@@ -88,4 +88,7 @@ typedef enum{
 // 日期换算 - 昨天、今天、明天、后天
 + (NSString *)getDateToStr:(NSDate *)date withFormat:(NSString *)format;
 
+// 字符串输出单个字符数组
++ (NSArray *)getStringArrWith:(NSString *)str;
+
 @end

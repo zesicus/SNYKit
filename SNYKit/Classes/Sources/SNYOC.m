@@ -430,6 +430,14 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
     return flagString ;
 }
 
++ (NSArray *)getStringArrWith:(NSString *)str {
+    NSMutableArray *arr = [NSMutableArray array];
+    for (int i = 0; i < str.length; i++) {
+        unichar ch = [str characterAtIndex:i];
+        [arr addObject:[NSString stringWithFormat:@"%C", ch]];
+    }
+    return arr.copy;
+}
 
 
 @end

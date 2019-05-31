@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59256836229F899800192CDF /* TestOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59256835229F899800192CDF /* TestOC.m */; };
 		5965E86621362DEE004252B1 /* SNYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5965E86521362DEE004252B1 /* SNYKit.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		4BC5CB8D44ABD3E0D5564C68 /* Pods_SNYKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNYKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59256834229F899800192CDF /* TestOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOC.h; sourceTree = "<group>"; };
+		59256835229F899800192CDF /* TestOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOC.m; sourceTree = "<group>"; };
 		5965E86521362DEE004252B1 /* SNYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SNYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5965E86721362E16004252B1 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		607FACD01AFB9204008FA782 /* SNYKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNYKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +130,8 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				59256834229F899800192CDF /* TestOC.h */,
+				59256835229F899800192CDF /* TestOC.m */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -346,6 +351,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				59256836229F899800192CDF /* TestOC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
