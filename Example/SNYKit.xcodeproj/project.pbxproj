@@ -8,25 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		59256836229F899800192CDF /* TestOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59256835229F899800192CDF /* TestOC.m */; };
+		593FC9A222A370A200C1CD1B /* Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC9A122A370A200C1CD1B /* Lesson2.swift */; };
+		593FC9A422A3763600C1CD1B /* Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC9A322A3763600C1CD1B /* Lesson3.swift */; };
+		593FC9AC22A4B27D00C1CD1B /* SNYKit_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC9AB22A4B27D00C1CD1B /* SNYKit_ExampleTests.swift */; };
+		593FC9BA22A4B86300C1CD1B /* SNYKit_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FC9B922A4B86300C1CD1B /* SNYKit_ExampleUITests.swift */; };
 		5965E86621362DEE004252B1 /* SNYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5965E86521362DEE004252B1 /* SNYKit.framework */; };
+		597A7ABF22A2616D00E82349 /* SNYError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A7ABE22A2616D00E82349 /* SNYError.swift */; };
+		597A7AC222A2679400E82349 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A7AC122A2679400E82349 /* Lesson1.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		762FA77D2199857200FBF321 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 762FA77C219983E600FBF321 /* iconfont.ttf */; };
-		920AE513B7E10B0A3E22E23C /* Pods_SNYKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC177548AA42531CD26E6597 /* Pods_SNYKit_Tests.framework */; };
 		F60306B4FC39E930AED6A384 /* Pods_SNYKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC5CB8D44ABD3E0D5564C68 /* Pods_SNYKit_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
+		593FC9AE22A4B27D00C1CD1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SNYKit;
+			remoteInfo = SNYKit_Example;
+		};
+		593FC9BC22A4B86300C1CD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = SNYKit_Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -34,8 +45,18 @@
 		4BC5CB8D44ABD3E0D5564C68 /* Pods_SNYKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNYKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59256834229F899800192CDF /* TestOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOC.h; sourceTree = "<group>"; };
 		59256835229F899800192CDF /* TestOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOC.m; sourceTree = "<group>"; };
+		593FC9A122A370A200C1CD1B /* Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2.swift; sourceTree = "<group>"; };
+		593FC9A322A3763600C1CD1B /* Lesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson3.swift; sourceTree = "<group>"; };
+		593FC9A922A4B27D00C1CD1B /* SNYKit_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNYKit_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		593FC9AB22A4B27D00C1CD1B /* SNYKit_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNYKit_ExampleTests.swift; sourceTree = "<group>"; };
+		593FC9AD22A4B27D00C1CD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593FC9B722A4B86300C1CD1B /* SNYKit_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNYKit_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		593FC9B922A4B86300C1CD1B /* SNYKit_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNYKit_ExampleUITests.swift; sourceTree = "<group>"; };
+		593FC9BB22A4B86300C1CD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5965E86521362DEE004252B1 /* SNYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SNYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5965E86721362E16004252B1 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		597A7ABE22A2616D00E82349 /* SNYError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNYError.swift; sourceTree = "<group>"; };
+		597A7AC122A2679400E82349 /* Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SNYKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNYKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +64,6 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* SNYKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNYKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		76076A23218808C3007A63EE /* SNYKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNYKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		762FA77C219983E600FBF321 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		7C3230FB5646738D1791ECF1 /* Pods-SNYKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNYKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNYKit_Example/Pods-SNYKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,20 +77,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		593FC9A622A4B27D00C1CD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593FC9B422A4B86300C1CD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5965E86621362DEE004252B1 /* SNYKit.framework in Frameworks */,
 				F60306B4FC39E930AED6A384 /* Pods_SNYKit_Example.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				920AE513B7E10B0A3E22E23C /* Pods_SNYKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +112,34 @@
 				FB9A1507E6ED4B3B4EEAC6E8 /* Pods-SNYKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		593FC9AA22A4B27D00C1CD1B /* SNYKit_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				593FC9AB22A4B27D00C1CD1B /* SNYKit_ExampleTests.swift */,
+				593FC9AD22A4B27D00C1CD1B /* Info.plist */,
+			);
+			path = SNYKit_ExampleTests;
+			sourceTree = "<group>";
+		};
+		593FC9B822A4B86300C1CD1B /* SNYKit_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				593FC9B922A4B86300C1CD1B /* SNYKit_ExampleUITests.swift */,
+				593FC9BB22A4B86300C1CD1B /* Info.plist */,
+			);
+			path = SNYKit_ExampleUITests;
+			sourceTree = "<group>";
+		};
+		597A7AC022A2676000E82349 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				597A7AC122A2679400E82349 /* Lesson1.swift */,
+				593FC9A122A370A200C1CD1B /* Lesson2.swift */,
+				593FC9A322A3763600C1CD1B /* Lesson3.swift */,
+			);
+			name = RxSwift;
 			sourceTree = "<group>";
 		};
 		5A456171DD963B119394AC43 /* Frameworks */ = {
@@ -106,7 +158,8 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SNYKit */,
-				607FACE81AFB9204008FA782 /* Tests */,
+				593FC9AA22A4B27D00C1CD1B /* SNYKit_ExampleTests */,
+				593FC9B822A4B86300C1CD1B /* SNYKit_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				313948B7CACEB88CDC4958AF /* Pods */,
 				5A456171DD963B119394AC43 /* Frameworks */,
@@ -117,7 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* SNYKit_Example.app */,
-				607FACE51AFB9204008FA782 /* SNYKit_Tests.xctest */,
+				593FC9A922A4B27D00C1CD1B /* SNYKit_ExampleTests.xctest */,
+				593FC9B722A4B86300C1CD1B /* SNYKit_ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,7 +183,9 @@
 				76076A23218808C3007A63EE /* SNYKit_Example-Bridging-Header.h */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				597A7AC022A2676000E82349 /* RxSwift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				597A7ABE22A2616D00E82349 /* SNYError.swift */,
 				59256834229F899800192CDF /* TestOC.h */,
 				59256835229F899800192CDF /* TestOC.m */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -148,23 +204,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +217,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		593FC9A822A4B27D00C1CD1B /* SNYKit_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 593FC9B022A4B27D00C1CD1B /* Build configuration list for PBXNativeTarget "SNYKit_ExampleTests" */;
+			buildPhases = (
+				593FC9A522A4B27D00C1CD1B /* Sources */,
+				593FC9A622A4B27D00C1CD1B /* Frameworks */,
+				593FC9A722A4B27D00C1CD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				593FC9AF22A4B27D00C1CD1B /* PBXTargetDependency */,
+			);
+			name = SNYKit_ExampleTests;
+			productName = SNYKit_ExampleTests;
+			productReference = 593FC9A922A4B27D00C1CD1B /* SNYKit_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		593FC9B622A4B86300C1CD1B /* SNYKit_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 593FC9BE22A4B86300C1CD1B /* Build configuration list for PBXNativeTarget "SNYKit_ExampleUITests" */;
+			buildPhases = (
+				593FC9B322A4B86300C1CD1B /* Sources */,
+				593FC9B422A4B86300C1CD1B /* Frameworks */,
+				593FC9B522A4B86300C1CD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				593FC9BD22A4B86300C1CD1B /* PBXTargetDependency */,
+			);
+			name = SNYKit_ExampleUITests;
+			productName = SNYKit_ExampleUITests;
+			productReference = 593FC9B722A4B86300C1CD1B /* SNYKit_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		607FACCF1AFB9204008FA782 /* SNYKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SNYKit_Example" */;
@@ -197,45 +272,33 @@
 			productReference = 607FACD01AFB9204008FA782 /* SNYKit_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* SNYKit_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SNYKit_Tests" */;
-			buildPhases = (
-				E1D752DBEE3A025184B626F4 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
-			);
-			name = SNYKit_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* SNYKit_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					593FC9A822A4B27D00C1CD1B = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = XSG6ZK7ZQR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					593FC9B622A4B86300C1CD1B = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = XSG6ZK7ZQR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = XSG6ZK7ZQR;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
-					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -253,12 +316,27 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* SNYKit_Example */,
-				607FACE41AFB9204008FA782 /* SNYKit_Tests */,
+				593FC9A822A4B27D00C1CD1B /* SNYKit_ExampleTests */,
+				593FC9B622A4B86300C1CD1B /* SNYKit_ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		593FC9A722A4B27D00C1CD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593FC9B522A4B86300C1CD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,13 +345,6 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,52 +399,51 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1D752DBEE3A025184B626F4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SNYKit_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		593FC9A522A4B27D00C1CD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				593FC9AC22A4B27D00C1CD1B /* SNYKit_ExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593FC9B322A4B86300C1CD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				593FC9BA22A4B86300C1CD1B /* SNYKit_ExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593FC9A222A370A200C1CD1B /* Lesson2.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				593FC9A422A3763600C1CD1B /* Lesson3.swift in Sources */,
+				597A7AC222A2679400E82349 /* Lesson1.swift in Sources */,
+				597A7ABF22A2616D00E82349 /* SNYError.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				59256836229F899800192CDF /* TestOC.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
+		593FC9AF22A4B27D00C1CD1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* SNYKit_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+			targetProxy = 593FC9AE22A4B27D00C1CD1B /* PBXContainerItemProxy */;
+		};
+		593FC9BD22A4B86300C1CD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* SNYKit_Example */;
+			targetProxy = 593FC9BC22A4B86300C1CD1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -397,6 +467,114 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		593FC9B122A4B27D00C1CD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XSG6ZK7ZQR;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SNYKit_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunny.SNYKit-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNYKit_Example.app/SNYKit_Example";
+			};
+			name = Debug;
+		};
+		593FC9B222A4B27D00C1CD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSG6ZK7ZQR;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SNYKit_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunny.SNYKit-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNYKit_Example.app/SNYKit_Example";
+			};
+			name = Release;
+		};
+		593FC9BF22A4B86300C1CD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XSG6ZK7ZQR;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SNYKit_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunny.SNYKit-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNYKit_Example;
+			};
+			name = Debug;
+		};
+		593FC9C022A4B86300C1CD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSG6ZK7ZQR;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SNYKit_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunny.SNYKit-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNYKit_Example;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -547,47 +725,27 @@
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9452147ACF48D94C40036863 /* Pods-SNYKit_Tests.debug.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNYKit_Example.app/SNYKit_Example";
-			};
-			name = Debug;
-		};
-		607FACF41AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB9A1507E6ED4B3B4EEAC6E8 /* Pods-SNYKit_Tests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNYKit_Example.app/SNYKit_Example";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		593FC9B022A4B27D00C1CD1B /* Build configuration list for PBXNativeTarget "SNYKit_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				593FC9B122A4B27D00C1CD1B /* Debug */,
+				593FC9B222A4B27D00C1CD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		593FC9BE22A4B86300C1CD1B /* Build configuration list for PBXNativeTarget "SNYKit_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				593FC9BF22A4B86300C1CD1B /* Debug */,
+				593FC9C022A4B86300C1CD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SNYKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -602,15 +760,6 @@
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
 				607FACF11AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SNYKit_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

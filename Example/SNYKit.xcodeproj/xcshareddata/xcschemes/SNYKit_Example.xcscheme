@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SNYKit_Tests.xctest"
-               BlueprintName = "SNYKit_Tests"
+               BlueprintIdentifier = "593FC9A822A4B27D00C1CD1B"
+               BuildableName = "SNYKit_ExampleTests.xctest"
+               BlueprintName = "SNYKit_ExampleTests"
+               ReferencedContainer = "container:SNYKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "593FC9B622A4B86300C1CD1B"
+               BuildableName = "SNYKit_ExampleUITests.xctest"
+               BlueprintName = "SNYKit_ExampleUITests"
                ReferencedContainer = "container:SNYKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
