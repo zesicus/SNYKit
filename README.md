@@ -1,4 +1,4 @@
-# SNYKit
+<p align="center"><img src="https://raw.githubusercontent.com/zesicus/SNYKit/master/tree_snykit.png" alt="" /></p>
 
 [![CI Status](https://img.shields.io/travis/zesicus/SNYKit.svg?style=flat)](https://travis-ci.org/zesicus/SNYKit)
 [![Version](https://img.shields.io/cocoapods/v/SNYKit.svg?style=flat)](https://cocoapods.org/pods/SNYKit)
