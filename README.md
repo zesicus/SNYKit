@@ -7,22 +7,11 @@
 
 ## About
 
-日常开发逐渐积累下来的一个 iOS 便利工具集。
-
-主要使用 Swift，还有一些用到的基于 OC 的方法（还有许多搜集到的工具代码，经自己测试和修改确保可用且应用于项目，并在此对借鉴代码的作者们说声谢谢！🙏）。
-
-已添加的依赖库：
-
-```
-v2.1 以上
-'ReachabilitySwift', '4.3.1'
-v2.4 以上
-'Kingfisher', '5.3.1'
-```
+日常 iOS 便利工具集 🌱
 
 ## Installation
 
-支持通过 [CocoaPods](https://cocoapods.org) 的方式去集成：
+### Cocoapods
 
 ```ruby
 pod 'SNYKit'

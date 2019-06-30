@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SNY.launchAnimation()
+        
+        SNY.gcd.main
+        
         Lesson3.start()
         
         

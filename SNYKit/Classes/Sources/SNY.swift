@@ -58,6 +58,8 @@ open class SNY {
     }
     
     // 启动动画
+    // Tips: 设置请注意，使用 LaunchScreen.storyboard 启动，请设置 view controller 的 identifier 为 "LaunchScreen"
+    //       请放置在 appDelegate.window.rootViewController 里的 viewDidLoad 中使用
     open class func launchAnimation() {
         let vc = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateViewController(withIdentifier: "LaunchScreen")
         let launchView = vc.view

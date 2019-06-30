@@ -15,11 +15,11 @@
 		5965E86621362DEE004252B1 /* SNYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5965E86521362DEE004252B1 /* SNYKit.framework */; };
 		597A7ABF22A2616D00E82349 /* SNYError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A7ABE22A2616D00E82349 /* SNYError.swift */; };
 		597A7AC222A2679400E82349 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A7AC122A2679400E82349 /* Lesson1.swift */; };
+		59FD270822C868CD0011C9B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FD270722C868CD0011C9B3 /* LaunchScreen.storyboard */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		762FA77D2199857200FBF321 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 762FA77C219983E600FBF321 /* iconfont.ttf */; };
 		F60306B4FC39E930AED6A384 /* Pods_SNYKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC5CB8D44ABD3E0D5564C68 /* Pods_SNYKit_Example.framework */; };
 /* End PBXBuildFile section */
@@ -57,13 +57,13 @@
 		5965E86721362E16004252B1 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		597A7ABE22A2616D00E82349 /* SNYError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNYError.swift; sourceTree = "<group>"; };
 		597A7AC122A2679400E82349 /* Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1.swift; sourceTree = "<group>"; };
+		59FD270722C868CD0011C9B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SNYKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNYKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		76076A23218808C3007A63EE /* SNYKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNYKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		762FA77C219983E600FBF321 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		7C3230FB5646738D1791ECF1 /* Pods-SNYKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNYKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNYKit_Example/Pods-SNYKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,13 +183,13 @@
 				76076A23218808C3007A63EE /* SNYKit_Example-Bridging-Header.h */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				597A7AC022A2676000E82349 /* RxSwift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				597A7ABE22A2616D00E82349 /* SNYError.swift */,
 				59256834229F899800192CDF /* TestOC.h */,
 				59256835229F899800192CDF /* TestOC.m */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				59FD270722C868CD0011C9B3 /* LaunchScreen.storyboard */,
+				597A7AC022A2676000E82349 /* RxSwift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SNYKit";
@@ -343,7 +343,7 @@
 			files = (
 				762FA77D2199857200FBF321 /* iconfont.ttf in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				59FD270822C868CD0011C9B3 /* LaunchScreen.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,14 +454,6 @@
 				607FACDA1AFB9204008FA782 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

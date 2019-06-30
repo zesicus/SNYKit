@@ -45,7 +45,7 @@ class SNYKit_ExampleUITests: XCTestCase {
         yesAlert.buttons["YES"].tap()
         button.tap()
         yesAlert.buttons["NO"].tap()
-        app.otherElements.containing(.navigationBar, identifier:"SNYKit_Example.View").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element/*@START_MENU_TOKEN@*/.press(forDuration: 0.7);/*[[".tap()",".press(forDuration: 0.7);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        app.otherElements.containing(.navigationBar, identifier:"SNYKit_Example.View").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.press(forDuration: 0.7);
         
     }
 

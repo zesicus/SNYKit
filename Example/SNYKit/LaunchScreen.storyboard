@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="puM-KF-R8p">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HBU-s1-9vW">
+            <objects>
+                <viewController storyboardIdentifier="LaunchScreen" id="puM-KF-R8p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BB9-Sy-dVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snykit" translatesAutoresizingMaskIntoConstraints="NO" id="G3F-4r-hYS">
+                                <rect key="frame" x="50" y="153" width="314" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G3F-4r-hYS" firstAttribute="centerX" secondItem="e0q-Xv-r83" secondAttribute="centerX" id="lF8-rH-UAs"/>
+                            <constraint firstItem="e0q-Xv-r83" firstAttribute="trailing" secondItem="G3F-4r-hYS" secondAttribute="trailing" constant="50" id="pA0-YW-Gvt"/>
+                            <constraint firstItem="G3F-4r-hYS" firstAttribute="centerY" secondItem="e0q-Xv-r83" secondAttribute="centerY" id="q1N-m2-aSv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e0q-Xv-r83"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22w-XF-S2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="snykit" width="2041" height="600"/>
+    </resources>
+</document>
