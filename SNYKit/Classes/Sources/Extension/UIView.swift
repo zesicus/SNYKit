@@ -81,4 +81,62 @@ public extension UIView {
             }
         }
     }
+    
+    // 顶部通知滑下来弹窗
+    
+    func slideDown(parentVC: UIViewController, bounds: CGRect) {
+        parentVC.view.addSubview(self)
+        self.frame = CGRect(x: (SNY.screen.width - bounds.size.width) / 2, y: -bounds.size.height, width: bounds.size.width, height: bounds.size.height)
+        UIView.animate(withDuration: 0.3) {
+            self.frame = CGRect(x: (SNY.screen.width - bounds.size.width) / 2, y: UIApplication.shared.statusBarFrame.size.height + 10, width: bounds.size.width, height: bounds.size.height)
+        }
+        SNY.gcd.after(time: 1.5, queue: GCD.main) {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.frame = CGRect(x: (SNY.screen.width - bounds.size.width) / 2, y: -bounds.size.height, width: bounds.size.width, height: bounds.size.height)
+            })
+        }
+    }
+    
+    // 获取UIView截图
+    func getImage() -> UIImage? {
+        UIGraphicsBeginImageContext(self.frame.size)
+        self.drawHierarchy(in: self.bounds, afterScreenUpdates: false)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    // 任意角圆弧裁剪
+    func corner(byRoundingCorners corners: UIRectCorner, radii: CGFloat) {
+        let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radii, height: radii))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+    }
+    
+    /// 底部圆弧裁剪
+    ///
+    /// - Parameters:
+    ///   - rect: View总大小
+    ///   - radius: 裁剪半径
+    func bottomArc(rect: CGRect, radius: CGFloat) {
+        let maskPath = UIBezierPath()
+        maskPath.addArc(withCenter: CGPoint(x: rect.size.width / 2, y: rect.size.height - radius), radius: radius, startAngle: 0, endAngle: CGFloat.pi, clockwise: true)
+        maskPath.addClip()
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+    }
+    
+    // 缩放动画
+    func bounceAnimation() {
+        let impliesAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+        impliesAnimation.values = [1.0 ,1.2, 0.9, 1.15, 0.95, 1.02, 1.0]
+        impliesAnimation.duration = 0.6
+        impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
+        self.layer.add(impliesAnimation, forKey: nil)
+    }
+
 }

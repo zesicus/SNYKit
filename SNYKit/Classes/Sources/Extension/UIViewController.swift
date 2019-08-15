@@ -142,4 +142,17 @@ public extension UIViewController {
         }
     }
     
+    // 页面添加子控制器
+    func addChildViewController(_ childVC: UIViewController, toVC: UIViewController) {
+        toVC.view.addSubview(childVC.view)
+        toVC.addChild(childVC)
+        childVC.didMove(toParent: toVC)
+    }
+    
+    func removeChildViewController(_ childVC: UIViewController) {
+        childVC.willMove(toParent: nil)
+        childVC.view.removeFromSuperview()
+        childVC.removeFromParent()
+    }
+    
 }

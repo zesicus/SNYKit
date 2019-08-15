@@ -60,12 +60,11 @@ open class SNY {
     // 启动动画
     // Tips: 设置请注意，使用 LaunchScreen.storyboard 启动，请设置 view controller 的 identifier 为 "LaunchScreen"
     //       请放置在 appDelegate.window.rootViewController 里的 viewDidLoad 中使用
-    open class func launchAnimation() {
+    open class func launchAnimation(on view: UIView? = UIApplication.shared.keyWindow ) {
         let vc = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateViewController(withIdentifier: "LaunchScreen")
         let launchView = vc.view
-        let mainWindow = UIApplication.shared.keyWindow
         launchView?.frame = screen.frame
-        mainWindow?.addSubview(launchView!)
+        view?.addSubview(launchView!)
         UIView.animate(withDuration: 1.0, delay: 0.5, options: .beginFromCurrentState, animations: {
             launchView?.alpha = 0.0
             launchView?.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 1.0)
@@ -198,5 +197,75 @@ open class SNY {
                 print(error)
             }
         }
+    }
+    
+    // 异形屏区分
+    public static let safeAreaBottom: CGFloat = {
+        var botHeight: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            botHeight = UIApplication.shared.keyWindow!.safeAreaInsets.bottom
+        } else {
+            botHeight = 0
+        }
+        return botHeight
+    }()
+    public static func isXseries() -> Bool {
+        return SNY.safeAreaBottom > 0
+    }
+    public static let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+    public static let naviBarHeight: CGFloat = 44 + statusBarHeight
+    
+    // 禁用屏幕点击事件
+    public static func disableTouchScreen() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    // 解禁
+    public static func enableTouchScreen() {
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+    
+    // MARK: - 人名分组
+    public static func getFirstLetterList(_ names: [String]) -> [String] {
+        var firstLetterArr = [String]()
+        for name in names {
+            let firstLetter = getFirstLetterFromString(aString: name)
+            firstLetterArr.append(firstLetter)
+        }
+        let firstLetterSet = Set(firstLetterArr)
+        firstLetterArr = Array(firstLetterSet)
+        firstLetterArr = firstLetterArr.sorted { (name1, name2) -> Bool in
+            return name1.localizedStandardCompare(name2) == .orderedAscending
+        }
+        return firstLetterArr
+    }
+    
+    // 获取联系人姓名首字母(传入汉字字符串, 返回大写拼音首字母)
+    public static func getFirstLetterFromString(aString: String) -> (String) {
+        
+        // 注意,这里一定要转换成可变字符串
+        let mutableString = NSMutableString.init(string: aString)
+        // 将中文转换成带声调的拼音
+        CFStringTransform(mutableString as CFMutableString, nil, kCFStringTransformToLatin, false)
+        // 去掉声调(用此方法大大提高遍历的速度)
+        let pinyinString = mutableString.folding(options: String.CompareOptions.diacriticInsensitive, locale: NSLocale.current)
+        // 将拼音首字母装换成大写
+        let strPinYin = polyphoneStringHandle(nameString: aString, pinyinString: pinyinString).uppercased()
+        // 截取大写首字母
+        let firstString = strPinYin.substring(toIndex: 1)
+        // 判断姓名首位是否为大写字母
+        let regexA = "^[A-Z]$"
+        let predA = NSPredicate.init(format: "SELF MATCHES %@", regexA)
+        return predA.evaluate(with: firstString) ? firstString : "#"
+    }
+    
+    /// 多音字处理
+    public static func polyphoneStringHandle(nameString:String, pinyinString:String) -> String {
+        if nameString.hasPrefix("长") {return "Chang"}
+        if nameString.hasPrefix("沈") {return "Shen"}
+        if nameString.hasPrefix("厦") {return "Xia"}
+        if nameString.hasPrefix("地") {return "Di"}
+        if nameString.hasPrefix("重") {return "Chong"}
+        
+        return pinyinString;
     }
 }
