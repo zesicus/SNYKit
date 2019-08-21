@@ -133,4 +133,113 @@ public extension UIImage {
         return img ?? self
     }
     
+    // 添加水印
+    // fontDirection 1 下方；2 左右方
+    func addWaterMark(at corner: UIRectCorner, img: UIImage?, text: String? = nil, imgWidth: CGFloat = 35, fontSize: CGFloat = 15, edge: CGFloat = 15, fontDirection: Int = 2, fontAlpha: CGFloat = 0.7) -> UIImage? {
+        var ratio: CGFloat = 1.0
+        if self.size.width / self.size.height > 375 / 500 {
+            ratio = self.size.width / SNY.screen.width
+        } else {
+            ratio = self.size.height / (SNY.screen.width * 500 / 375)
+        }
+        UIGraphicsBeginImageContext(self.size)
+        self.draw(at: CGPoint.zero)
+        switch corner {
+        case .topLeft:
+            if img != nil {
+                let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                img!.draw(in: CGRect(x: edge * ratio, y: edge * ratio, width: imgWidth * ratio, height: theHeight))
+            }
+            if text != nil {
+                if fontDirection == 1 {
+                    if img != nil {
+                        let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                        text!.draw(in: CGRect(x: edge * ratio, y: edge * ratio + theHeight + 8 * ratio, width: text!.getWidth(size: fontSize * ratio), height: fontSize * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    } else {
+                        text!.draw(at: CGPoint(x: edge * ratio, y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    }
+                } else if fontDirection == 2 {
+                    if img != nil {
+                        text!.draw(in: CGRect(x: imgWidth * ratio + 8 * ratio, y: edge * ratio, width: text!.getWidth(size: fontSize * ratio), height: fontSize * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    } else {
+                        text!.draw(at: CGPoint(x: edge * ratio, y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    }
+                }
+            }
+            break
+        case .topRight:
+            if img != nil {
+                let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                img!.draw(in: CGRect(x: self.size.width - edge * ratio - imgWidth * ratio, y: edge * ratio, width: imgWidth * ratio, height: theHeight))
+            }
+            if text != nil {
+                if fontDirection == 1 {
+                    if img != nil {
+                        let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                        text!.draw(at: CGPoint(x: self.size.width - edge * ratio - text!.getWidth(size: fontSize * ratio), y: edge * ratio + theHeight + 8 * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    } else {
+                        text!.draw(at: CGPoint(x: self.size.width - edge * ratio - text!.getWidth(size: fontSize * ratio), y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    }
+                } else if fontDirection == 2 {
+                    if img != nil {
+                        let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                        text!.draw(at: CGPoint(x: self.size.width - edge * ratio - imgWidth * ratio - 8 * ratio - text!.getWidth(size: fontSize * ratio), y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    } else {
+                        text!.draw(at: CGPoint(x: self.size.width - edge * ratio - text!.getWidth(size: fontSize * ratio), y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                    }
+                }
+            }
+            break
+        case .bottomLeft:
+            if text != nil {
+                if fontDirection == 1 {
+                    text!.draw(at: CGPoint(x: edge * ratio, y: self.size.height - edge * ratio - fontSize * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                } else if fontDirection == 2 {
+                    text!.draw(at: CGPoint(x: edge * ratio + imgWidth * ratio + 8 * ratio, y: self.size.height - edge * ratio - fontSize * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                }
+                
+            }
+            if img != nil {
+                let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                if text != nil {
+                    if fontDirection == 1 {
+                        img!.draw(in: CGRect(x: edge * ratio, y: self.size.height - edge * ratio - fontSize * ratio - 8 * ratio - theHeight, width: imgWidth * ratio, height: theHeight))
+                    } else if fontDirection == 2 {
+                        img!.draw(in: CGRect(x: edge * ratio, y: self.size.height - edge * ratio - theHeight, width: imgWidth * ratio, height: theHeight))
+                    }
+                } else {
+                    img!.draw(in: CGRect(x: edge * ratio, y: self.size.height - edge * ratio - theHeight, width: imgWidth * ratio, height: theHeight))
+                }
+            }
+            break
+        case .bottomRight:
+            if text != nil {
+                if fontDirection == 1 {
+                    text!.draw(at: CGPoint(x: self.size.width - edge * ratio - text!.getWidth(size: fontSize * ratio), y: self.size.height - edge * ratio - fontSize * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                } else if fontDirection == 2 {
+                    text!.draw(at: CGPoint(x: self.size.width - edge * ratio - imgWidth * ratio - 8 * ratio - text!.getWidth(size: fontSize * ratio), y: self.size.height - edge * ratio - fontSize * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
+                }
+            }
+            if img != nil {
+                let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
+                if text != nil {
+                    if fontDirection == 1 {
+                        img!.draw(in: CGRect(x: self.size.width - edge * ratio - imgWidth * ratio, y: self.size.height - edge * ratio - fontSize * ratio - 8 * ratio - theHeight, width: imgWidth * ratio, height: theHeight))
+                    } else if fontDirection == 2 {
+                        img!.draw(in: CGRect(x: self.size.width - edge * ratio - imgWidth * ratio, y: self.size.height - edge * ratio - fontSize * ratio - 8 * ratio - theHeight, width: imgWidth * ratio, height: theHeight))
+                    }
+                } else {
+                    img!.draw(in: CGRect(x: self.size.width - edge * ratio - imgWidth * ratio, y: self.size.height - edge * ratio - fontSize * ratio, width: imgWidth * ratio, height: theHeight))
+                }
+            }
+            break
+        default:
+            break
+        }
+        let newImg = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImg
+    }
+    
 }
