@@ -34,6 +34,14 @@ public extension String {
     }
  */
     
+    func transformToPinYin() -> String{
+        let mutableString = NSMutableString(string: self)
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
+        CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)
+        let string = String(mutableString)
+        return string.replacingOccurrences(of: " ", with: "")
+    }
+    
     //获取字符串宽度
     func getWidth(size: CGFloat) -> CGFloat {
         return self.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: size)]).width

@@ -57,6 +57,13 @@ open class SNY {
         }
     }
     
+    // 加载Nib
+    public static func loadNib(_ theClass: AnyClass) -> View? {
+        let className = NSStringFromClass(theClass).components(separatedBy: ".").last!
+        let v = Bundle.main.loadNibNamed(className, owner: nil, options: nil)?.last as? View
+        return v
+    }
+    
     // 启动动画
     // Tips: 设置请注意，使用 LaunchScreen.storyboard 启动，请设置 view controller 的 identifier 为 "LaunchScreen"
     //       请放置在 appDelegate.window.rootViewController 里的 viewDidLoad 中使用
