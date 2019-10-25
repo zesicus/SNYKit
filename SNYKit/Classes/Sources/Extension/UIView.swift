@@ -61,9 +61,9 @@ public extension UIView {
             }
         }
         self.frame = CGRect(x: (SNY.screen.width - bounds.size.width) / 2, y: SNY.screen.height, width: bounds.size.width, height: bounds.size.height)
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
             self.frame = CGRect(x: (SNY.screen.width - bounds.size.width) / 2, y: SNY.screen.height - bounds.size.height, width: bounds.size.width, height: bounds.size.height)
-        }
+        }, completion: nil)
     }
     
     func slideOut(with backgroundView: UIView? = nil) {
