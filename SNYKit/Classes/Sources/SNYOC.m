@@ -109,6 +109,28 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
     return attributeString;
 }
 
++ (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color font:(UIFont *)font {
+    NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
+    for (int i = 0; i < content.length; i ++) {
+        //每次只截取一个字符的范围
+        NSString *a = [content substringWithRange:NSMakeRange(i, 1)];
+        //判断装有0-9的字符串的数字数组是否包含截取字符串出来的单个字符，从而筛选出符合要求的数字字符的范围NSMakeRange
+        if ([chars containsObject:a]) {
+            [attributeString setAttributes:@{NSForegroundColorAttributeName:color
+                                             ,NSFontAttributeName:font
+                                             } range:NSMakeRange(i, 1)];
+        }
+    }
+    return attributeString;
+}
+
++ (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font {
+    NSRange range = [content rangeOfString:str];
+    NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
+    [attributeString setAttributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:font} range:range];
+    return attributeString;
+}
+
 + (void)addAnimation:(CALayer *)layer Type:(NSString *)type {
     CATransition *transition = [CATransition animation];
     transition.duration = 0.5f;
