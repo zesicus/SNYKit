@@ -461,5 +461,66 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
     return arr.copy;
 }
 
+//
+
++ (CGFloat)folderSize{
+    CGFloat folderSize = 0.0;
+    
+    //获取路径
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES)firstObject];
+    
+    //获取所有文件的数组
+    NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachePath];
+    
+    NSLog(@"文件数：%ld",files.count);
+    
+    for(NSString *path in files) {
+        
+        NSString*filePath = [cachePath stringByAppendingString:[NSString stringWithFormat:@"/%@",path]];
+        
+        //累加
+        folderSize += [[NSFileManager defaultManager]attributesOfItemAtPath:filePath error:nil].fileSize;
+    }
+    //转换为M为单位
+    CGFloat sizeM = folderSize /1024.0/1024.0;
+    NSLog(@"%f",sizeM);
+    return sizeM;
+}
+
++ (CGFloat)clearCache {
+    
+    //===============清除缓存==============
+    //获取路径
+    NSString*cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES)objectAtIndex:0];
+    
+    //返回路径中的文件数组
+    NSArray*files = [[NSFileManager defaultManager]subpathsAtPath:cachePath];
+    
+    NSLog(@"文件数：%ld",[files count]);
+    if([files count] == 0){
+        return 0;
+        
+    }else{
+        for(NSString *p in files){
+            NSError*error;
+            
+            NSString*path = [cachePath stringByAppendingString:[NSString stringWithFormat:@"/%@",p]];
+            
+            if([[NSFileManager defaultManager]fileExistsAtPath:path])
+            {
+                BOOL isRemove = [[NSFileManager defaultManager]removeItemAtPath:path error:&error];
+                if(isRemove) {
+                    NSLog(@"清除成功");
+                }else{
+                    NSLog(@"清除失败");
+                }
+            }
+        }
+    }
+    
+    CGFloat size = [SNYOC folderSize];
+    
+    return size;
+}
 
 @end

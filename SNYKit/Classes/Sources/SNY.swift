@@ -44,6 +44,11 @@ open class SNY {
     // MARK: - UUID
     public static let uuid = UIDevice.current.identifierForVendor?.uuidString
     
+    // MARK: - 复制字符串
+    public static func copyStr(_ str: String) {
+        UIPasteboard.general.string = str
+    }
+    
     // MARK: - 目录位置
     public static var documentsPath: URL {
         get {

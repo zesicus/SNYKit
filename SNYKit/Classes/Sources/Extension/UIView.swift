@@ -13,12 +13,14 @@ public extension UIView {
     //适用于Alert动画展示效果
     
     func animateIn(parentVC: UIViewController, with backgroundView: UIView? = nil) {
+        self.alpha = 1
         if backgroundView != nil {
             backgroundView!.backgroundColor = UIColor.black.withAlphaComponent(0)
             backgroundView!.frame = SNY.screen.frame
             parentVC.view.addSubview(backgroundView!)
         }
         parentVC.view.addSubview(self)
+        self.center = CGPoint(x: parentVC.view.center.x, y: parentVC.view.center.y - 30)
         if backgroundView != nil {
             UIView.animate(withDuration: 0.2) {
                 backgroundView!.backgroundColor = UIColor.black.withAlphaComponent(0.3)
@@ -137,6 +139,14 @@ public extension UIView {
         impliesAnimation.duration = 0.6
         impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
         self.layer.add(impliesAnimation, forKey: nil)
+    }
+    
+    // 添加阴影
+    func addShadow(blackAlpha: Float, shadowRadius: CGFloat, shadowOffset: CGSize = .zero) {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowOpacity = blackAlpha
+        self.layer.shadowRadius = shadowRadius
     }
 
 }

@@ -93,4 +93,7 @@ typedef enum{
 // 字符串输出单个字符数组
 + (NSArray *)getStringArrWith:(NSString *)str;
 
+// 清除缓存 MB
++ (CGFloat)clearCache;
+
 @end

@@ -186,7 +186,6 @@ public extension UIImage {
                     }
                 } else if fontDirection == 2 {
                     if img != nil {
-                        let theHeight = img!.size.height * (imgWidth / img!.size.width) * ratio
                         text!.draw(at: CGPoint(x: self.size.width - edge * ratio - imgWidth * ratio - 8 * ratio - text!.getWidth(size: fontSize * ratio), y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
                     } else {
                         text!.draw(at: CGPoint(x: self.size.width - edge * ratio - text!.getWidth(size: fontSize * ratio), y: edge * ratio), withAttributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(fontAlpha), NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize * ratio)])
