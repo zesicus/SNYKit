@@ -34,7 +34,7 @@ public extension String {
     }
  */
     
-    func transformToPinYin() -> String{
+    func transformToPinYin() -> String {
         let mutableString = NSMutableString(string: self)
         CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
         CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)
@@ -99,8 +99,12 @@ public extension String {
     
     var urlEscaped: String {
         get {
-            return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+            return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
         }
+    }
+    
+    var urlEncoded: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
     }
     
     var utf8Encoded: Data {
