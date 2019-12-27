@@ -131,6 +131,13 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
     return attributeString;
 }
 
++ (NSAttributedString *)returnUnderlineColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font {
+    NSRange range = [content rangeOfString:str];
+    NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
+    [attributeString setAttributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:font, NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]} range:range];
+    return attributeString;
+}
+
 + (void)addAnimation:(CALayer *)layer Type:(NSString *)type {
     CATransition *transition = [CATransition animation];
     transition.duration = 0.5f;
