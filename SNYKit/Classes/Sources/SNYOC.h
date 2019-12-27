@@ -54,6 +54,9 @@ typedef enum{
 //颜色生成图片
 + (UIImage *)createImageWithColor:(UIColor *)color;
 
+// 退出App
++ (void)exitApplication;
+
 /*
  坐标系：
  WGS-84：是国际标准，GPS坐标（Google Earth使用、或者GPS模块）
