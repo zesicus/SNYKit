@@ -133,6 +133,10 @@ public extension String {
         return String(self[start ..< end])
     }
     
+    func subString(fromIndex: Int, toIndex: Int) -> String {
+        return self[min(fromIndex, self.count) ..< max(0, toIndex)]
+    }
+    
     //转化为字符数组
     func toCharArray() -> [String] {
         var chars = [String]()
