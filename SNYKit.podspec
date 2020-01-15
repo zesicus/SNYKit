@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNYKit'
-  s.version          = '2.4.2'
-  s.summary          = 'Sunny的便利工具集.'
+  s.version          = '2.5.0'
+  s.summary          = '贼便利的工具集.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-日常使用，一般App常用到的方法汇总，不断扩充完善中。
+为满足日常开发需要，不断扩充完善中。
                        DESC
 
   s.homepage         = 'https://github.com/zesicus/SNYKit'
