@@ -488,7 +488,7 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
     //获取所有文件的数组
     NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachePath];
     
-    NSLog(@"文件数：%lu",(unsigned long)files.count);
+    //NSLog(@"文件数：%lu",(unsigned long)files.count);
     
     for(NSString *path in files) {
         
@@ -512,7 +512,7 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
     //返回路径中的文件数组
     NSArray*files = [[NSFileManager defaultManager]subpathsAtPath:cachePath];
     
-    NSLog(@"文件数：%lu",(unsigned long)[files count]);
+    //NSLog(@"文件数：%lu",(unsigned long)[files count]);
     if([files count] == 0){
         return 0;
         
