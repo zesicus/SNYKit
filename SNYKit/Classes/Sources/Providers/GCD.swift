@@ -19,8 +19,18 @@ open class GCD {
     public static func seria(label: String) -> DispatchQueue {
         return DispatchQueue(label: label)
     }
-    public static func concurrent(label: String) -> DispatchQueue {
-        return DispatchQueue(label: label, qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+    
+    /// 自定义线程
+    /// - Parameters:
+    ///   - label: 线程命名
+    ///   - isConcurrent: 是否并发，默认并发执行，串行请设置为 false
+    public static func concurrent(label: String, isConcurrent: Bool = true) -> DispatchQueue {
+        if isConcurrent {
+            return DispatchQueue(label: label, qos: .default, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+        } else {
+            return DispatchQueue(label: label)
+        }
+        
     }
     
     open func after(time: Double, queue: DispatchQueue, callBack: @escaping () -> Void) {

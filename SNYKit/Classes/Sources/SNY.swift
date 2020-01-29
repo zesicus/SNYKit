@@ -199,13 +199,15 @@ open class SNY {
     }
     
     // Kingfisher download pic
-    public static func downloadImage(addr: String, _ completion: @escaping (UIImage) -> Void) {
+    public static func downloadImage(addr: String, _ completion: @escaping (UIImage?) -> Void) {
         let downloader = ImageDownloader.default
-        downloader.downloadImage(with: URL(string: addr)!) { result in
+        downloader.downloadImage(with: URL(string: addr)!, options: [.cacheOriginalImage]) { result in
             switch result {
             case .success(let value):
                 completion(value.image)
             case .failure(let error):
+                let img: UIImage? = nil
+                completion(img)
                 print(error)
             }
         }
