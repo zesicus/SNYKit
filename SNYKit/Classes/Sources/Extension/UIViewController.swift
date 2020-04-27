@@ -26,6 +26,7 @@ public extension UIViewController {
     func addIconFontLeftBarButtonItem(_ navigationItem: UINavigationItem, unicode: String, color: UIColor, target: Any?, action: Selector?, iconSize: CGFloat = 22) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: unicode, style: .plain, target: target, action: action)
         navigationItem.leftBarButtonItem?.setTitleTextAttributes([.font: UIFont.iconFont(ofSize: iconSize), .foregroundColor: color], for: .normal)
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([.font: UIFont.iconFont(ofSize: iconSize), .foregroundColor: color], for: .highlighted)
     }
     
     func addLeftBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
@@ -76,6 +77,7 @@ public extension UIViewController {
     func addIconFontRightBarButtonItem(_ navigationItem: UINavigationItem, unicode: String, color: UIColor, target: Any?, action: Selector?, iconSize: CGFloat = 22) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: unicode, style: .plain, target: target, action: action)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([.font: UIFont.iconFont(ofSize: iconSize), .foregroundColor: color], for: .normal)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([.font: UIFont.iconFont(ofSize: iconSize), .foregroundColor: color], for: .highlighted)
     }
     
     func addRightBarButtonItems(_ navigationItem: UINavigationItem, images: [UIImage], dist: CGFloat, target: Any?, action: [Selector]) {
