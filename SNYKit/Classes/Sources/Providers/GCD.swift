@@ -43,6 +43,52 @@ open class GCD {
         return DispatchTime.now() + time
     }
     
+    // 带取消功能的 GCD 延迟
+    // 使用：
+    // let a = delay(4) {
+    //     print("hello one !")
+    // }
+    // let b = delay(6) {
+    //     print("hello two !")
+    // }
+    //
+    // cancel(a)
+    // cancel(b)
+    
+    typealias DelayTask = (_ cancel: Bool) -> ()
+     
+    @discardableResult func delay(_ time: TimeInterval, task: @escaping () -> ()) -> DelayTask? {
+        func dispatch_later(block: @escaping () -> ()) {
+            let t = DispatchTime.now() + time
+            DispatchQueue.main.asyncAfter(deadline: t, execute: block)
+        }
+        
+        var closure: (() -> Void)? = task
+        var result: DelayTask?
+        
+        let delayedClosure: DelayTask = {
+            cancel in
+            if let closure = closure {
+                if !cancel {
+                    DispatchQueue.main.async(execute: closure)
+                }
+            }
+            closure = nil
+            result = nil
+        }
+        result = delayedClosure
+        dispatch_later {
+            if let result = result {
+                result(false)
+            }
+        }
+        return result
+    }
+     
+    func cancelDelay(_ task: DelayTask?) {
+        task?(true)
+    }
+    
     //GCD定时器
 
     lazy var timerContainer = [String: DispatchSourceTimer]()
