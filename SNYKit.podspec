@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SNYKit'
-  s.version          = '2.5.1'
+  s.version          = '2.5.2'
   s.summary          = '贼便利的工具集'
 
 # This description is used to generate tags and improve search results.
