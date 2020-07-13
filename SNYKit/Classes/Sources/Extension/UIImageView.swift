@@ -78,7 +78,7 @@ extension UIImageView {
             do {
                 let _ = try result.get()
             } catch let error {
-                dprint(error)
+                SNY.dprint(error)
             }
         }
     }
@@ -93,7 +93,7 @@ extension UIImageView {
             do {
                 let _ = try result.get()
             } catch let error {
-                dprint(error)
+                SNY.dprint(error)
             }
         }
     }

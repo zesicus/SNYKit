@@ -34,6 +34,8 @@ public extension String {
     }
  */
     
+    /// 汉字转化成拼音
+    /// - Returns: 拼音字符串
     func transformToPinYin() -> String {
         let mutableString = NSMutableString(string: self)
         CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
@@ -42,24 +44,29 @@ public extension String {
         return string.replacingOccurrences(of: " ", with: "")
     }
     
-    //获取字符串宽度
+    
+    /// 获取字符串宽度
+    /// - Parameter size: 字体大小
+    /// - Returns: 宽度
     func getWidth(size: CGFloat) -> CGFloat {
         return self.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: size)]).width
     }
     
+    /// HTML 代码转 AttributedString 字符串
     var html2AttributedString: NSAttributedString? {
         do {
             return try NSAttributedString(data: Data(utf8), options: [.documentType: NSAttributedString.DocumentType.html,
                                                                       .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
         } catch {
-            dprint(error)
+            SNY.dprint(error)
             return nil
         }
     }
     
-    var html2String: String {
+    /// HTML 代码转纯文字
+    var html2String: String? {
         get {
-            return html2AttributedString?.string ?? ""
+            return html2AttributedString?.string
         }
     }
     
@@ -93,7 +100,7 @@ public extension String {
             resourceValues.isExcludedFromBackup = true
             try fileToExclude.setResourceValues(resourceValues)
         } catch {
-            dprint(error.localizedDescription)
+            SNY.dprint(error.localizedDescription)
         }
     }
     

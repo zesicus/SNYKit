@@ -668,6 +668,7 @@
 		58AF5425808F42AFD9227B80C0003000 /* ObservableConvertibleType+SharedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+SharedSequence.swift"; path = "RxCocoa/Traits/SharedSequence/ObservableConvertibleType+SharedSequence.swift"; sourceTree = "<group>"; };
 		58BA56849CE0F7AD393E2F1A59EF49CB /* UITextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		590381506F4DCBB8FCEE08FA80FCEB2D /* ObservableConvertibleType+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+Driver.swift"; path = "RxCocoa/Traits/Driver/ObservableConvertibleType+Driver.swift"; sourceTree = "<group>"; };
+		59B553CA24BC4BC1004A1F05 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		59D2C145E0009F1D19BFEAA23A4B5616 /* NSSlider+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSSlider+Rx.swift"; path = "RxCocoa/macOS/NSSlider+Rx.swift"; sourceTree = "<group>"; };
 		5A0D105BCC2F74822A161BED913D53E6 /* DisposeBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisposeBase.swift; path = RxSwift/Disposables/DisposeBase.swift; sourceTree = "<group>"; };
 		5A1F4C3BFC26615C1A55251661ED3A69 /* Logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logging.swift; path = RxCocoa/Foundation/Logging.swift; sourceTree = "<group>"; };
@@ -1625,11 +1626,11 @@
 		B1063CCE1C6F2AD6673804CA9BD24AC0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0782F19978A647F1019A7632FC3387C6 /* String.swift */,
 				EE45D5393275EC4A975B7CA6B395D1B9 /* CGFloat.swift */,
 				EE1A5915DF75B3775A466A8B234E16BA /* Date.swift */,
 				425DF11A5DA43F0F8431778E70BE6B48 /* Double.swift */,
 				8FEBFC4F4F8D2643ECFC9D6A0EA2BF72 /* Int.swift */,
-				0782F19978A647F1019A7632FC3387C6 /* String.swift */,
 				E296BD4622CB9847DCF65917AF0A52B8 /* UIButton.swift */,
 				74E0F1C09ED25D608BAA6E55B7AE95E9 /* UIColor.swift */,
 				D8B2A5C7279BFA546F21760EC112ABC9 /* UIFont.swift */,
@@ -1640,6 +1641,7 @@
 				3BB102727B2307FBF7F2EF173ED7D917 /* UIView.swift */,
 				43E034CF9636E084808A2ACA4736EA24 /* UIViewController.swift */,
 				F5E53A4E240FF315C955DE04D29443A4 /* UserDefaults.swift */,
+				59B553CA24BC4BC1004A1F05 /* UIDevice.swift */,
 			);
 			name = Extension;
 			path = SNYKit/Classes/Sources/Extension;
