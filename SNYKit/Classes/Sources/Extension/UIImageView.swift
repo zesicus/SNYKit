@@ -34,11 +34,6 @@ extension UIImageView {
         self.image = UIGraphicsGetImageFromCurrentImageContext()!
     }
     
-    public func setCorner(radius:CGFloat) {
-        self.layer.cornerRadius = radius
-        self.layer.masksToBounds = true
-    }
-    
     //图片蒙版
     public func maskPic(image: UIImage?, with maskImage: UIImage? = UIImage(named: "mask_image")) {
         let maskLayer = CAShapeLayer()

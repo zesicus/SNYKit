@@ -55,9 +55,9 @@ open class GCD {
     // cancel(a)
     // cancel(b)
     
-    typealias DelayTask = (_ cancel: Bool) -> ()
+    public typealias DelayTask = (_ cancel: Bool) -> ()
      
-    @discardableResult func delay(_ time: TimeInterval, task: @escaping () -> ()) -> DelayTask? {
+    @discardableResult public func delay(_ time: TimeInterval, task: @escaping () -> ()) -> DelayTask? {
         func dispatch_later(block: @escaping () -> ()) {
             let t = DispatchTime.now() + time
             DispatchQueue.main.asyncAfter(deadline: t, execute: block)
@@ -85,7 +85,7 @@ open class GCD {
         return result
     }
      
-    func cancelDelay(_ task: DelayTask?) {
+    public func cancelDelay(_ task: DelayTask?) {
         task?(true)
     }
     

@@ -148,5 +148,11 @@ public extension UIView {
         self.layer.shadowOpacity = blackAlpha
         self.layer.shadowRadius = shadowRadius
     }
+    
+    // 设置圆角
+    public func setCorner(radius:CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
 
 }
