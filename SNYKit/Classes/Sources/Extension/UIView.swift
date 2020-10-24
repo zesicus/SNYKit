@@ -150,9 +150,9 @@ public extension UIView {
     }
     
     // 设置圆角
-    public func setCorner(radius:CGFloat) {
+    public func setCorner(radius: CGFloat, clip: Bool = true) {
         self.layer.cornerRadius = radius
-        self.layer.masksToBounds = true
+        self.clipsToBounds = clip
     }
 
 }
