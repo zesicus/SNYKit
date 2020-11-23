@@ -95,7 +95,7 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
     return [image stretchableImageWithLeftCapWidth:width/2 topCapHeight:width/2];
 }
 
-+ (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color {
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color {
     NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
     for (int i = 0; i < content.length; i ++) {
         //每次只截取一个字符的范围
@@ -108,17 +108,17 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
                                              } range:NSMakeRange(i, 1)];
         }
     }
-    return attributeString;
+    return [attributeString mutableCopy];
 }
 
-+ (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color {
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color {
     NSRange range = [content rangeOfString:str];
     NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
     [attributeString setAttributes:@{NSForegroundColorAttributeName:color} range:range];
-    return attributeString;
+    return [attributeString mutableCopy];
 }
 
-+ (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color font:(UIFont *)font {
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color font:(UIFont *)font {
     NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
     for (int i = 0; i < content.length; i ++) {
         //每次只截取一个字符的范围
@@ -130,14 +130,14 @@ static const double xPi = M_PI  * 3000.0 / 180.0;
                                              } range:NSMakeRange(i, 1)];
         }
     }
-    return attributeString;
+    return [attributeString mutableCopy];
 }
 
-+ (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font {
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font {
     NSRange range = [content rangeOfString:str];
     NSMutableAttributedString *attributeString  = [[NSMutableAttributedString alloc] initWithString:content];
     [attributeString setAttributes:@{NSForegroundColorAttributeName:color, NSFontAttributeName:font} range:range];
-    return attributeString;
+    return [attributeString mutableCopy];
 }
 
 + (NSAttributedString *)returnUnderlineColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font {

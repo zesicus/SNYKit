@@ -31,13 +31,13 @@ typedef enum{
 + (void)recordLog:(NSString *)logStr;
 
 //把你想变颜色的字列出来，当然你只能传单个字符的数组进去
-+ (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color;
-+ (NSAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color font:(UIFont *)font;
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color;
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content which:(NSArray *)chars color:(UIColor *)color font:(UIFont *)font;
 
 //把你的keyword变成有颜色的字体～
-+ (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color;
-+ (NSAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font;
-+ (NSAttributedString *)returnUnderlineColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font;
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color;
++ (NSMutableAttributedString *)returnColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font;
++ (NSMutableAttributedString *)returnUnderlineColorfulString:(NSString *)content keyword:(NSString *)str color:(UIColor *)color font:(UIFont *)font;
 
 //给你的Layer加一个过渡效果，方法里面有详细说明
 + (void)addAnimation:(CALayer *)layer Type:(NSString *)type;
