@@ -217,7 +217,7 @@ open class SNY {
     /// 网络类型 (或用于权限判断)
     public static var networkType: Reachability.Connection {
         get {
-            let reachability = Reachability()!
+            let reachability = try! Reachability()
             return reachability.connection
         }
     }

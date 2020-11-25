@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'ReachabilitySwift', '4.3.1'
+  s.dependency 'ReachabilitySwift', '5.0.0'
   s.dependency 'Kingfisher', '5.3.1'
 end

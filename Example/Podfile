@@ -6,9 +6,4 @@ target 'SNYKit_Example' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SnapKit'
-
-  target 'SNYKit_Tests' do
-    inherit! :search_paths
-    
-  end
 end
