@@ -218,7 +218,7 @@ open class SNY {
     public static var networkType: Reachability.Connection {
         get {
             let reachability = try! Reachability()
-            return reachability.connection
+            return reachability!.connection
         }
     }
     
