@@ -539,4 +539,15 @@ static bool isContains(CLLocationCoordinate2D point, CLLocationCoordinate2D p1, 
     return size;
 }
 
++ (NSString *)base64Encode: (NSData *)data {
+    data = [data base64EncodedDataWithOptions:0];
+    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return ret;
+}
+
++ (NSData *)base64Decode:(NSString *)str {
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:str options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return data;
+}
+
 @end

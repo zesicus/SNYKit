@@ -57,6 +57,9 @@ typedef enum{
 // 退出App
 + (void)exitApplication;
 
++ (NSString *)base64Encode:(NSData *)data;
++ (NSData *)base64Decode:(NSString *)str;
+
 /*
  坐标系：
  WGS-84：是国际标准，GPS坐标（Google Earth使用、或者GPS模块）
